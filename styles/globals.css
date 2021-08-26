@@ -1,16 +1,44 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  @font-face {
+    font-family: "WindSong";
+    src: url("/fonts/WindSong/WindSong-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
 
-* {
-  box-sizing: border-box;
+  @font-face {
+    font-family: "WindSong";
+    src: url("/fonts/WindSong/tt_commons_medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  :root {
+    font-size: 19px;
+  }
 }
