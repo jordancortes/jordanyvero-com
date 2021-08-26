@@ -4,35 +4,38 @@ import Input from "../components/Input";
 
 export default function Home() {
   return (
-    <div className="flex flex-col text-center items-center">
-      <Image
-        src="/images/index/hero.png"
-        alt="Foto decorada de los novios: Jordan y Vero"
-        width="1991"
-        height="2055"
-      />
-      <div className="pt-3 pb-6 space-y-4 min-w-9/10">
-        <h1 className="text-4xl text-primary font-cursive">
+    <div className="flex flex-col lg:flex-row text-center items-center align-middle lg:min-h-screen">
+      <div className="lg:w-1/2 lg:h-full">
+        <Image
+          src="/images/index/hero.png"
+          alt="Foto decorada de los novios: Jordan y Vero"
+          width="768"
+          height="792"
+        />
+      </div>
+
+      <div className="pt-3 pb-6 space-y-4 lg:space-y-8 min-w-9/10 lg:flex-initial lg:min-w-min lg:w-1/2 flex flex-col items-center">
+        <h1 className="text-4xl lg:text-6xl text-primary font-cursive">
           Jordan &amp; Vero
         </h1>
-        <div className="bg-dot bg-repeat-x bg-center">
-          <span className="font-light text-secondary uppercase bg-white px-3">
+        <div className="bg-dot bg-repeat-x bg-center lg:w-1/2">
+          <span className="font-light text-secondary uppercase bg-white px-3 lg:text-xl">
             Save the Date
           </span>
         </div>
-        <p className="font-medium text-gray-600">
+        <p className="font-medium text-gray-600 lg:text-xl">
           Marzo 19, 2022
           <br />
           Guadalajara, Jalisco
         </p>
 
-        <form className="flex flex-col items-center space-y-3">
+        <form className="flex flex-col items-center space-y-3 w-full">
           <Input
             type="text"
             placeholder="C&oacute;digo"
-            className="p-2 w-full"
+            className="p-2 w-full lg:w-1/2"
           ></Input>
-          <Button className="w-full">Ver invitaci&oacute;n</Button>
+          <Button className="w-full lg:w-1/2">Ver invitaci&oacute;n</Button>
         </form>
       </div>
     </div>
