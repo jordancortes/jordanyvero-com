@@ -1,8 +1,17 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Button from "../components/Button";
 import Input from "../components/Input";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleSearchInvitation = async (e) => {
+    e.preventDefault();
+
+    router.push({ pathname: "/wedding" });
+  };
+
   return (
     <div className="flex flex-col lg:flex-row text-center items-center align-middle lg:min-h-screen">
       <div className="lg:w-1/2 lg:h-full">
@@ -29,7 +38,10 @@ export default function Home() {
           Guadalajara, Jalisco
         </p>
 
-        <form className="flex flex-col space-y-3">
+        <form
+          className="flex flex-col space-y-3"
+          onSubmit={handleSearchInvitation}
+        >
           <Input type="text" placeholder="C&oacute;digo"></Input>
           <Button>Ver invitaci&oacute;n</Button>
         </form>
