@@ -61,7 +61,7 @@ export default function Invitation() {
         .querySelector("#guests-wedding-details")
         .classList.remove("hidden");
     }
-  }, [assistance]);
+  }, [maxAssistance, assistance]);
 
   return (
     <div className="px-3">
