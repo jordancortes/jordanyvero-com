@@ -12,7 +12,7 @@
 
   @font-face {
     font-family: "WindSong";
-    src: url("/fonts/WindSong/tt_commons_medium.ttf") format("truetype");
+    src: url("/fonts/WindSong/WindSong-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
   }
@@ -40,5 +40,25 @@
 
   :root {
     font-size: 19px;
+  }
+
+  p,
+  select,
+  input {
+    @apply text-gray-600;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    @apply text-gray-900;
+  }
+
+  label {
+    @apply text-sm font-medium;
   }
 }
