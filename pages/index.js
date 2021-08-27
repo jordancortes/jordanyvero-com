@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className="text-4xl lg:text-6xl text-primary font-cursive">
           Jordan &amp; Vero
         </h1>
-        <div className="bg-dot bg-repeat-x bg-center lg:w-1/2">
+        <div className="bg-dot bg-repeat-x bg-center w-10/12">
           <span className="font-light text-secondary uppercase bg-white px-3 lg:text-xl">
             Save the Date
           </span>
@@ -29,13 +29,9 @@ export default function Home() {
           Guadalajara, Jalisco
         </p>
 
-        <form className="flex flex-col items-center space-y-3 w-full">
-          <Input
-            type="text"
-            placeholder="C&oacute;digo"
-            className="p-2 w-full lg:w-1/2"
-          ></Input>
-          <Button className="w-full lg:w-1/2">Ver invitaci&oacute;n</Button>
+        <form className="flex flex-col space-y-3">
+          <Input type="text" placeholder="C&oacute;digo"></Input>
+          <Button>Ver invitaci&oacute;n</Button>
         </form>
       </div>
     </div>
