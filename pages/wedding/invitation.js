@@ -92,11 +92,13 @@ export default function Invitation() {
               name="phone1"
               label="Tel&eacute;fono #1"
               type="number"
+              pattern="[0-9]*"
             ></Input>
             <Input
               name="phone2"
               label="Tel&eacute;fono #2"
               type="number"
+              pattern="[0-9]*"
             ></Input>
           </div>
         </div>

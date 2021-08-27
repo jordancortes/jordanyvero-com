@@ -3,6 +3,7 @@ const Input = ({
   defaultValue,
   name,
   type,
+  pattern,
   label,
   placeholder,
   className,
@@ -23,6 +24,7 @@ const Input = ({
           defaultValue={defaultValue}
           name={name}
           type={type}
+          pattern={pattern}
           placeholder={placeholder}
           className={l_class}
         ></input>
