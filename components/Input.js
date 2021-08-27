@@ -1,10 +1,33 @@
-const Input = ({ children, type, placeholder, className }) => {
-  let fullClass =
-    "border border-gray-300 rounded-sm shadow-md block text-gray-600 text-sm text-center " +
-    className;
+const Input = ({
+  children,
+  defaultValue,
+  name,
+  type,
+  label,
+  placeholder,
+  className,
+}) => {
+  let l_class =
+    "p-2 w-full border border-gray-300 rounded-sm shadow-md block" +
+    (className !== undefined ? " " + className : "");
 
   return (
-    <input type={type} placeholder={placeholder} className={fullClass}></input>
+    <div className="space-y-1">
+      {label ? <label htmlFor={name}>{label}</label> : ""}
+      {type === "area" ? (
+        <textarea name={name} rows="3" className={l_class}>
+          {children}
+        </textarea>
+      ) : (
+        <input
+          defaultValue={defaultValue}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          className={l_class}
+        ></input>
+      )}
+    </div>
   );
 };
 
