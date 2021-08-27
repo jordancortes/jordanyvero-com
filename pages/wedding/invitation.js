@@ -87,7 +87,7 @@ export default function Invitation() {
 
         <div id="guests-contact-details">
           <div className="space-y-4">
-            <Input name="email" label="Email"></Input>
+            <Input name="email" label="Email" type="email"></Input>
             <Input
               name="phone1"
               label="Tel&eacute;fono #1"
