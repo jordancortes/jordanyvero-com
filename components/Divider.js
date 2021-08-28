@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Divider = () => {
   return (
-    <div className="place-self-center">
+    <div className="flex flex-col items-center">
       <Image
         alt="Divisor"
         src="/images/global/section-divider@3x.png"
