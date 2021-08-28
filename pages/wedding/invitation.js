@@ -6,10 +6,21 @@ import Select from "../../components/Select";
 import GuestForm from "../../components/GuestForm";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Invitation() {
   const [maxAssistance, setMaxAssistance] = useState(4);
   const [assistance, setAssistance] = useState(2);
+
+  const router = useRouter();
+
+  const handleSubmitInvitation = (e) => {
+    e.preventDefault();
+
+    //TODO: handle database update
+
+    router.push({ pathname: "./confirmation" });
+  };
 
   const cleanContactDetails = () => {
     document.getElementsByName("email")[0].value = null;
@@ -70,7 +81,10 @@ export default function Invitation() {
         <h2 className="text-2xl font-medium">¡Hola familia Cortes Garcia!</h2>
         <p>Tenemos {maxAssistance} lugares esperando por ustedes.</p>
       </div>
-      <form className="flex flex-col space-y-4 pb-4">
+      <form
+        onSubmit={handleSubmitInvitation}
+        className="flex flex-col space-y-4 pb-4"
+      >
         <Select
           label="Confirmo que asistir&aacute;n a la boda:"
           onChange={(e) => setAssistance(e.target.value)}
