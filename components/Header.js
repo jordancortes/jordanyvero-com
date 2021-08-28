@@ -16,7 +16,7 @@ const Header = ({ withButton }) => {
     <header className="py-3 border-b flex justify-between">
       <h1
         onClick={handleGoToWedding}
-        className="text-primary font-cursive text-4xl cursor-pointer"
+        className="text-primary font-cursive text-3xl cursor-pointer"
       >
         J&amp;V
       </h1>
