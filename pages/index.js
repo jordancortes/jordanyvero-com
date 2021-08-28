@@ -6,7 +6,7 @@ import Input from "../components/Input";
 export default function Home() {
   const router = useRouter();
 
-  const handleSearchInvitation = async (e) => {
+  const handleGoToWedding = async (e) => {
     e.preventDefault();
 
     router.push({ pathname: "/wedding" });
@@ -38,10 +38,7 @@ export default function Home() {
           Guadalajara, Jalisco
         </p>
 
-        <form
-          className="flex flex-col space-y-3"
-          onSubmit={handleSearchInvitation}
-        >
+        <form className="flex flex-col space-y-3" onSubmit={handleGoToWedding}>
           <Input type="text" placeholder="C&oacute;digo"></Input>
           <Button>Ver invitaci&oacute;n</Button>
         </form>

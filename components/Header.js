@@ -4,7 +4,7 @@ import Button from "./Button";
 const Header = ({ withButton }) => {
   const router = useRouter();
 
-  const handleGoToConfirmAssistance = async () => {
+  const handleGoToInvitation = async () => {
     router.push({ pathname: "/wedding/invitation" });
   };
 
@@ -21,9 +21,7 @@ const Header = ({ withButton }) => {
         J&amp;V
       </h1>
       {withButton ? (
-        <Button onClick={handleGoToConfirmAssistance}>
-          Confirmar Asistencia
-        </Button>
+        <Button onClick={handleGoToInvitation}>Confirmar Asistencia</Button>
       ) : (
         ""
       )}
