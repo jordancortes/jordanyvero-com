@@ -62,6 +62,10 @@
     @apply text-2xl font-medium;
   }
 
+  h3 {
+    @apply text-xl font-medium;
+  }
+
   label {
     @apply text-sm font-medium;
   }
