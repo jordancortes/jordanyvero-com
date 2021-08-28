@@ -58,6 +58,10 @@
     @apply text-gray-900;
   }
 
+  h2 {
+    @apply text-2xl font-medium;
+  }
+
   label {
     @apply text-sm font-medium;
   }

@@ -78,7 +78,7 @@ export default function Invitation() {
     <div className="px-3">
       <Header />
       <div className="flex flex-col items-center py-4 space-y-2">
-        <h2 className="text-2xl font-medium">¡Hola familia Cortes Garcia!</h2>
+        <h2>¡Hola familia Cortes Garcia!</h2>
         <p>Tenemos {maxAssistance} lugares esperando por ustedes.</p>
       </div>
       <form
