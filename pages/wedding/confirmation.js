@@ -16,9 +16,7 @@ export default function Confirmation() {
     <div className="px-4">
       <Header />
       <div className="flex flex-col items-center text-center space-y-4 pt-4">
-        <h2 className="text-lg font-medium">
-          Gracias por confirmar tu asistencia
-        </h2>
+        <h2>¡Gracias por confirmar tu asistencia!</h2>
         {assistance !== 0 ? (
           <div className="space-y-4">
             <p>
