@@ -1,13 +1,4 @@
-const Input = ({
-  children,
-  defaultValue,
-  name,
-  type,
-  pattern,
-  label,
-  placeholder,
-  className,
-}) => {
+const Input = ({ children, defaultValue, name, type, pattern, label, placeholder, className }) => {
   let l_class =
     "p-2 w-full border border-gray-300 rounded-sm shadow-md block" +
     (className !== undefined ? " " + className : "");

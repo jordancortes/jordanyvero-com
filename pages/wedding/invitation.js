@@ -36,8 +36,7 @@ export default function Invitation() {
     // cleanup fields
     document.getElementsByName("guest-" + order + "-name")[0].value = null;
     document.getElementsByName("guest-" + order + "-dish")[0].value = "meat";
-    document.getElementsByName("guest-" + order + "-transport")[0].value =
-      "false";
+    document.getElementsByName("guest-" + order + "-transport")[0].value = "false";
     document.getElementsByName("guest-" + order + "-allergies")[0].value = null;
 
     // hide the whole section
@@ -55,9 +54,7 @@ export default function Invitation() {
       // Show only needed guests
       Array.from(document.querySelectorAll(".guest")).forEach((guest) => {
         if (assistance > guest.dataset.order) {
-          document
-            .querySelector("#guest-" + guest.dataset.order)
-            .classList.remove("hidden");
+          document.querySelector("#guest-" + guest.dataset.order).classList.remove("hidden");
         } else {
           cleanGuestDetails(guest.dataset.order);
         }
@@ -65,12 +62,8 @@ export default function Invitation() {
 
       // Handle rest of content
       document.querySelector("#no-guest-message").classList.add("hidden");
-      document
-        .querySelector("#guests-contact-details")
-        .classList.remove("hidden");
-      document
-        .querySelector("#guests-wedding-details")
-        .classList.remove("hidden");
+      document.querySelector("#guests-contact-details").classList.remove("hidden");
+      document.querySelector("#guests-wedding-details").classList.remove("hidden");
     }
   }, [maxAssistance, assistance]);
 
@@ -82,10 +75,7 @@ export default function Invitation() {
           <h2>¡Hola familia Cortes Garcia!</h2>
           <p>Tenemos {maxAssistance} lugares esperando por ustedes.</p>
         </div>
-        <form
-          onSubmit={handleSubmitInvitation}
-          className="flex flex-col space-y-4 pb-4"
-        >
+        <form onSubmit={handleSubmitInvitation} className="flex flex-col space-y-4 pb-4">
           <Select
             label="Confirmo que asistir&aacute;n a la boda:"
             onChange={(e) => setAssistance(e.target.value)}
@@ -93,9 +83,7 @@ export default function Invitation() {
           >
             {[...Array(maxAssistance + 1)].map((v, idx) => (
               <option key={idx} value={idx}>
-                {idx === 0
-                  ? "No asistiré"
-                  : idx + (idx === 1 ? " persona" : " personas")}
+                {idx === 0 ? "No asistiré" : idx + (idx === 1 ? " persona" : " personas")}
               </option>
             ))}
           </Select>
@@ -122,8 +110,8 @@ export default function Invitation() {
 
           <div id="no-guest-message" className="space-y-4 hidden">
             <p>
-              Del fieston que te vas a perder, al menos dejanos un mensaje (y te
-              pasas por la sección de regalos)
+              Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
+              sección de regalos)
             </p>
             <Input label="Mensaje" type="area"></Input>
           </div>

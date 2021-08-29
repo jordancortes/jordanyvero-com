@@ -2,9 +2,7 @@ import Input from "./Input";
 import Select from "./Select";
 
 const GuestForm = ({ id, className, dataOrder, title }) => {
-  let l_class =
-    "flex flex-col  space-y-4" +
-    (className !== undefined ? " " + className : "");
+  let l_class = "flex flex-col  space-y-4" + (className !== undefined ? " " + className : "");
 
   return (
     <div id={id} data-order={dataOrder} className={l_class}>
@@ -22,11 +20,7 @@ const GuestForm = ({ id, className, dataOrder, title }) => {
         <option value="false">No</option>
         <option value="true">Si</option>
       </Select>
-      <Input
-        name={"guest-" + dataOrder + "-allergies"}
-        label="Alergias"
-        type="area"
-      ></Input>
+      <Input name={"guest-" + dataOrder + "-allergies"} label="Alergias" type="area"></Input>
     </div>
   );
 };
