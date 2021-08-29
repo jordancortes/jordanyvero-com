@@ -10,7 +10,7 @@ const Event = ({ variant, title, time, children }) => {
           <div className="h-1"></div>
         )}
         <Image
-          src="/images/global/icon-heart.svg"
+          src="/images/wedding/icon-heart.svg"
           alt="icono de corazon"
           width="16.5"
           height="14.08"
