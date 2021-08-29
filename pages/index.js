@@ -25,10 +25,12 @@ export default function Home() {
 
       <div className="pt-3 pb-6 space-y-4 lg:space-y-8 min-w-9/10 lg:flex-initial lg:min-w-min lg:w-1/2 flex flex-col items-center">
         <h1 className="text-4xl lg:text-6xl text-primary font-cursive">Jordan &amp; Vero</h1>
-        <div className="bg-dot bg-repeat-x bg-center w-10/12">
-          <span className="font-light text-secondary uppercase bg-white px-3 lg:text-xl">
+        <div className="flex w-full">
+          <div className="w-full border-b border-secondary self-center"></div>
+          <div className="font-light text-secondary uppercase bg-white px-3 lg:text-xl flex-none">
             Save the Date
-          </span>
+          </div>
+          <div className="w-full border-b border-secondary self-center"></div>
         </div>
         <p className="font-medium text-gray-600 lg:text-xl">
           Marzo 19, 2022
