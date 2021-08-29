@@ -58,7 +58,7 @@ export default function Wedding() {
           <h2 id="event" className="uppercase">
             Evento
           </h2>
-          <a className="variant-secondary" href="webcal://calendar/wedding.ics">
+          <a className="variant-secondary" href="/calendar/wedding.ics">
             Agregar al calendario
           </a>
           <Tagline>S&aacute;bado, 19 de Marzo de 2022</Tagline>
