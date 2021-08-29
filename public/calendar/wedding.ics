@@ -23,12 +23,12 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20210829T002434Z
-UID:20210829T002434Z-1575841672@marudot.com
+DTSTAMP:20210829T040347Z
+UID:20210829T040347Z-1186607560@marudot.com
 DTSTART;TZID=America/Mexico_City:20220319T180000
 DTEND;TZID=America/Mexico_City:20220320T020000
 SUMMARY:Boda Jordan&Vero
-DESCRIPTION:Dirección:\nCarretera a Colotlan KM5\,5\, 45205 Zapopan\, JAL\, México\n\nMapa:\nhttps://goo.gl/maps/fJBzkcrBFf7pspEh6\n\nSitio Web:\nhttps://jordanyvero.com
+DESCRIPTION:Dirección: Carretera a Colotlan KM5\,5\, 45205 Zapopan\, JAL\, México\n\nMapa: https://goo.gl/maps/fJBzkcrBFf7pspEh6\n\nSitio Web: https://jordanyvero.com
 LOCATION:Hacienda La Santa Cruz
 BEGIN:VALARM
 ACTION:DISPLAY
