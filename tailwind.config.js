@@ -9,9 +9,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#B79265",
-        secondary: "#2C6E49",
+        primary: "#b79265",
+        secondary: "#2c6e49",
         ash: "#373F41",
+        rock: "#c3cbcd",
       },
       minWidth: {
         "9/10": "90%",
