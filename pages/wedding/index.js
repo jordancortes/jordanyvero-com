@@ -1,4 +1,9 @@
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
 import Container from "../../components/Container";
 import Divider from "../../components/Divider";
 import Event from "../../components/Event";
@@ -7,6 +12,7 @@ import Gift from "../../components/Gift";
 import Header from "../../components/Header";
 import IconContent from "../../components/IconContent";
 import Tagline from "../../components/Tagline";
+import City from "../../components/City";
 
 export default function Wedding() {
   return (
@@ -52,7 +58,7 @@ export default function Wedding() {
           <h2 id="event" className="uppercase">
             Evento
           </h2>
-          <a className="variant-secondary" href="/calendar/wedding.ics">
+          <a className="variant-secondary" href="webcal://calendar/wedding.ics">
             Agregar al calendario
           </a>
           <Tagline>S&aacute;bado, 19 de Marzo de 2022</Tagline>
@@ -119,20 +125,42 @@ export default function Wedding() {
           <h2 id="city" className="uppercase">
             La Ciudad
           </h2>
-          <span className="flex">
-            <Image
-              src="/images/wedding/city.jpg"
-              alt="Foto de Guadalajara"
-              width="259"
-              height="259"
-            />
-          </span>
-          <h3>Guadalajara</h3>
-          <p className="text-center">
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-            quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-            mentitum.
-          </p>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay
+            pagination={{ clickable: true }}
+            spaceBetween={50}
+            className="w-full"
+          >
+            <SwiperSlide>
+              <City variant="start" city="Guadalajara">
+                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
+                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
+                mentitum.
+              </City>
+            </SwiperSlide>
+            <SwiperSlide>
+              <City variant="middle" city="Chapala">
+                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
+                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
+                mentitum.
+              </City>
+            </SwiperSlide>
+            <SwiperSlide>
+              <City variant="middle" city="Tequila">
+                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
+                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
+                mentitum.
+              </City>
+            </SwiperSlide>
+            <SwiperSlide>
+              <City variant="end" city="Vallarta">
+                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
+                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
+                mentitum.
+              </City>
+            </SwiperSlide>
+          </Swiper>
         </Container>
         <Divider />
         <Container>
