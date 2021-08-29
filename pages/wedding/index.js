@@ -48,7 +48,7 @@ export default function Wedding() {
           </a>
         </Container>
         <Divider />
-        <Container className="bg-event bg-center">
+        <Container className="bg-event bg-left bg-cover">
           <h2 id="event" className="uppercase">
             Evento
           </h2>
@@ -72,7 +72,7 @@ export default function Wedding() {
           </div>
         </Container>
         <Divider />
-        <Container className="bg-important bg-center">
+        <Container className="bg-important bg-right bg-cover">
           <h2 id="important" className="uppercase">
             Importante
           </h2>
@@ -155,7 +155,7 @@ export default function Wedding() {
           </a>
         </Container>
         <Divider />
-        <Container className="bg-transport bg-center">
+        <Container className="bg-transport bg-left bg-cover">
           <h2 id="transport" className="uppercase">
             Transporte
           </h2>
