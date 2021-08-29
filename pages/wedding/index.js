@@ -167,9 +167,9 @@ export default function Wedding() {
               linkTitle="Ver en mapa"
               linkHref="https://goo.gl/maps/XffChC7wmAizJoaRA"
             >
-              El aeropuerto de Guadalajara es el "Aeropuerto Internacional de Guadalajara Miguel
-              Hidalgo y Costilla" ubicado a unos 25 minutos al sur del corazón de la ciudad. El
-              aeropuerto cuenta con taxis seguros y zonas para renta de autos.
+              El aeropuerto de Guadalajara es el &quot;Aeropuerto Internacional de Guadalajara
+              Miguel Hidalgo y Costilla&quot; ubicado a unos 25 minutos al sur del corazón de la
+              ciudad. El aeropuerto cuenta con taxis seguros y zonas para renta de autos.
             </IconContent>
             <IconContent iconType="toWedding" title="Rumbo a la boda">
               Toma en cuenta el tiempo aproximado de llegada al lugar, ya sea que consigas un
