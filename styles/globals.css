@@ -40,6 +40,7 @@
 
   :root {
     font-size: 19px;
+    scroll-behavior: smooth;
   }
 
   p,
@@ -64,6 +65,22 @@
 
   h3 {
     @apply text-xl font-medium;
+  }
+
+  a {
+    @apply text-primary underline;
+  }
+
+  a.variant-secondary {
+    @apply py-1 px-3 bg-white text-sm text-primary font-medium rounded-sm border border-primary no-underline;
+  }
+
+  #footer h1 a {
+    @apply text-primary;
+  }
+
+  #footer a {
+    @apply text-white no-underline;
   }
 
   label {

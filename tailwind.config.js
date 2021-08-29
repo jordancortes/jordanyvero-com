@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         primary: "#B79265",
         secondary: "#2C6E49",
+        ash: "#373F41",
       },
       minWidth: {
         "9/10": "90%",
@@ -20,6 +21,10 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         dot: "url('/images/index/dot.png')",
+        "dot-gray": "url('/images/global/dot-gray.png')",
+        event: "url('/images/wedding/event.jpg')",
+        transport: "url('/images/wedding/transport.jpg')",
+        important: "url('/images/wedding/important.jpg')",
       }),
     },
   },

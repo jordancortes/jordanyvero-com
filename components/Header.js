@@ -14,17 +14,10 @@ const Header = ({ withButton }) => {
 
   return (
     <header className="px-2 py-3 border-b flex justify-between">
-      <h1
-        onClick={handleGoToWedding}
-        className="text-primary font-cursive text-3xl cursor-pointer"
-      >
+      <h1 onClick={handleGoToWedding} className="text-primary font-cursive text-3xl cursor-pointer">
         J&amp;V
       </h1>
-      {withButton ? (
-        <Button onClick={handleGoToInvitation}>Confirmar Asistencia</Button>
-      ) : (
-        ""
-      )}
+      {withButton ? <Button onClick={handleGoToInvitation}>Confirmar Asistencia</Button> : ""}
     </header>
   );
 };
