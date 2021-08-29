@@ -5,7 +5,7 @@ const Divider = () => {
     <div className="flex flex-col items-center">
       <Image
         alt="Divisor"
-        src="/images/global/section-divider@3x.png"
+        src="/images/global/section-divider.svg"
         width="300"
         height="29.56"
         layout="fixed"
