@@ -136,8 +136,7 @@ export default function Wedding() {
             La Ciudad
           </h2>
           <Swiper
-            modules={[Autoplay, Pagination]}
-            autoplay
+            modules={[Pagination]}
             pagination={{ clickable: true }}
             spaceBetween={50}
             className="w-full"
