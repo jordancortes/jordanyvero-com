@@ -13,34 +13,50 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row text-center items-center align-middle lg:min-h-screen">
-      <div className="lg:w-1/2 lg:h-full">
+    <div className="lg:flex lg:h-screen lg:items-center">
+      <div className="flex md:hidden">
         <Image
-          src="/images/index/hero.png"
+          src="/images/index/hero.jpg"
           alt="Foto decorada de los novios: Jordan y Vero"
-          width="768"
-          height="792"
+          width="524"
+          height="520"
+          objectFit="none"
+          objectPosition="65% bottom"
         />
       </div>
 
-      <div className="pt-3 pb-6 space-y-4 lg:space-y-8 min-w-9/10 lg:flex-initial lg:min-w-min lg:w-1/2 flex flex-col items-center">
-        <h1 className="text-4xl lg:text-6xl text-primary font-cursive">Jordan &amp; Vero</h1>
-        <div className="flex w-full">
+      <div className="hidden md:flex md:pb-4 lg:w-1/2">
+        <Image
+          src="/images/index/hero.jpg"
+          alt="Foto decorada de los novios: Jordan y Vero"
+          width="2691"
+          height="2103"
+          objectFit="contain"
+        />
+      </div>
+
+      <div className="flex flex-col space-y-3 items-center px-4 lg:w-1/2 lg:space-y-8">
+        <h1 className="text-4xl lg:text-5xl xl:text-7xl text-primary font-cursive font-medium">
+          Jordan &amp; Vero
+        </h1>
+
+        <div className="flex w-full md:w-3/4 xl:w-1/2">
           <div className="w-full border-b border-secondary self-center"></div>
           <div className="font-light text-secondary uppercase bg-white px-3 lg:text-xl flex-none">
             Save the Date
           </div>
           <div className="w-full border-b border-secondary self-center"></div>
         </div>
-        <p className="font-medium text-gray-600 lg:text-xl">
+
+        <p className="font-medium text-center text-gray-600 lg:text-xl">
           Marzo 19, 2022
           <br />
           Guadalajara, Jalisco
         </p>
 
-        <form className="flex flex-col space-y-3" onSubmit={handleGoToWedding}>
+        <form className="flex space-x-3" onSubmit={handleGoToWedding}>
           <Input type="text" placeholder="C&oacute;digo"></Input>
-          <Button>Ver invitaci&oacute;n</Button>
+          <Button className="flex-shrink-0">Ver invitaci&oacute;n</Button>
         </form>
       </div>
     </div>
