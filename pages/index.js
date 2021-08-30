@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../components/Button";
 import Input from "../components/Input";
@@ -14,6 +15,10 @@ export default function Home() {
 
   return (
     <div className="lg:flex lg:h-screen lg:items-center">
+      <Head>
+        <title>Boda Jordan&amp;Vero</title>
+      </Head>
+
       <div className="flex md:hidden">
         <Image
           src="/images/index/hero.jpg"

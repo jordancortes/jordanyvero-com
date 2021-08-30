@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import { useState } from "react";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
@@ -14,6 +15,10 @@ export default function Confirmation() {
 
   return (
     <div>
+      <Head>
+        <title>Boda Jordan&amp;Vero | Confirmaci&oacute;n</title>
+      </Head>
+
       <Header />
       <div className="px-4">
         <div className="flex flex-col items-center text-center space-y-4 pt-4">

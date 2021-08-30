@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -17,6 +18,10 @@ import City from "../../components/City";
 export default function Wedding() {
   return (
     <div>
+      <Head>
+        <title>Boda Jordan&amp;Vero | Informaci&oacute;n</title>
+      </Head>
+
       <Header withButton />
       <div className="flex flex-col">
         <Container>

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Button from "../../components/Button";
 import Divider from "../../components/Divider";
 import Header from "../../components/Header";
@@ -69,6 +70,10 @@ export default function Invitation() {
 
   return (
     <div>
+      <Head>
+        <title>Boda Jordan&amp;Vero | Invitaci&oacute;n</title>
+      </Head>
+
       <Header />
       <div className="px-3">
         <div className="flex flex-col items-center py-4 space-y-2">
