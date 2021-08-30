@@ -145,9 +145,10 @@ export default function Wedding() {
             <SwiperSlide>
               <City city="Guadalajara" variant="guadalajara">
                 El corazón de Jalisco, donde podrás visitar hermosas catedrales y museos, así como
-                las plazas y parques emblemáticos de esta zona. Obligado ir a "Casa Bariachi" para
-                disfrutar de nuestra comida regional y de un buen mariachi. También visita de noche
-                el corredor de "Chapultepec" para cenar y pasear por el andador.
+                las plazas y parques emblemáticos de esta zona. Obligado ir a &quot;Casa
+                Bariachi&quot; para disfrutar de nuestra comida regional y de un buen mariachi.
+                También visita de noche el corredor de &quot;Chapultepec&quot; para cenar y pasear
+                por el andador.
               </City>
             </SwiperSlide>
             <SwiperSlide>
@@ -155,7 +156,7 @@ export default function Wedding() {
                 Obligada la visita a este pueblo mágico, productor de nuestra bebida nacional. Pasea
                 por sus calles mágicas. Visita las casas tequileras donde podras conocer las
                 destilerias y recorrer los deslumbrantes campos de agave. No olvides pasar por
-                "Cantaritos el Güero" donde disfrutarás con bebidas y música.
+                &quot;Cantaritos el Güero&quot; donde disfrutarás con bebidas y música.
               </City>
             </SwiperSlide>
             <SwiperSlide>
