@@ -24,7 +24,7 @@ const Gift = ({ iconType, title, children, withLink, linkTitle, linkHref }) => {
         <p>{children}</p>
       </div>
       {withLink ? (
-        <a className="variant-secondary" href={linkHref}>
+        <a className="variant-secondary" href={linkHref} target="_blank">
           {linkTitle}
         </a>
       ) : (
