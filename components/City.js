@@ -1,33 +1,50 @@
 import Image from "next/image";
 
+const renderCity = (city) => {
+  switch (city) {
+    case "guadalajara":
+      return (
+        <Image
+          src="/images/wedding/city/guadalajara.jpg"
+          alt="Foto de la ciudad de Guadalajara"
+          width="259"
+          height="259"
+        />
+      );
+    case "tequila":
+      return (
+        <Image
+          src="/images/wedding/city/tequila.jpg"
+          alt="Foto de la ciudad de Tequila"
+          width="259"
+          height="259"
+        />
+      );
+    case "magic":
+      return (
+        <Image
+          src="/images/wedding/city/magic.jpg"
+          alt="Foto de pueblo magico"
+          width="259"
+          height="259"
+        />
+      );
+    case "vallarta":
+      return (
+        <Image
+          src="/images/wedding/city/vallarta.jpg"
+          alt="Foto de la ciudad de Vallarta"
+          width="259"
+          height="259"
+        />
+      );
+  }
+};
+
 const City = ({ city, children, variant }) => {
   return (
-    <div className="flex flex-col items-center mb-8 border rounded-sm p-2">
-      <div className="flex items-center justify-between w-full">
-        <div className="flex w-2">
-          {variant === "middle" || variant === "end"
-            ? // <Image
-              //   src="/images/wedding/chevron-left.svg"
-              //   alt="flecha a la izquierda"
-              //   width="8"
-              //   height="16"
-              // />
-              ""
-            : ""}
-        </div>
-        <Image src="/images/wedding/city.jpg" alt="Foto de Guadalajara" width="259" height="259" />
-        <div className="flex w-2">
-          {variant === "start" || variant === "middle"
-            ? // <Image
-              //   src="/images/wedding/chevron-right.svg"
-              //   alt="flecha a la derecha"
-              //   width="8"
-              //   height="16"
-              // />
-              ""
-            : ""}
-        </div>
-      </div>
+    <div className="flex flex-col items-center mb-10 border rounded-sm p-2">
+      <div className="flex mb-3">{renderCity(variant)}</div>
       <h3>{city}</h3>
       <p className="text-center">{children}</p>
     </div>

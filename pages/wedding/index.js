@@ -143,31 +143,35 @@ export default function Wedding() {
             className="w-full"
           >
             <SwiperSlide>
-              <City variant="start" city="Guadalajara">
-                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-                mentitum.
+              <City city="Guadalajara" variant="guadalajara">
+                El corazón de Jalisco, donde podrás visitar hermosas catedrales y museos, así como
+                las plazas y parques emblemáticos de esta zona. Obligado ir a "Casa Bariachi" para
+                disfrutar de nuestra comida regional y de un buen mariachi. También visita de noche
+                el corredor de "Chapultepec" para cenar y pasear por el andador.
               </City>
             </SwiperSlide>
             <SwiperSlide>
-              <City variant="middle" city="Chapala">
-                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-                mentitum.
+              <City city="Tequila" variant="tequila">
+                Obligada la visita a este pueblo mágico, productor de nuestra bebida nacional. Pasea
+                por sus calles mágicas. Visita las casas tequileras donde podras conocer las
+                destilerias y recorrer los deslumbrantes campos de agave. No olvides pasar por
+                "Cantaritos el Güero" donde disfrutarás con bebidas y música.
               </City>
             </SwiperSlide>
             <SwiperSlide>
-              <City variant="middle" city="Tequila">
-                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-                mentitum.
+              <City city="Pueblos Magicos" variant="magic">
+                Jalisco cuenta con hermosos pueblos mágicos para pasarla como reyes. Viaja al pasado
+                en el centro de Tapalpa, quedaté en una cabaña en medio del bosque de Mazamitla,
+                come a orillas del lago mas grande del pais en Chapala, o un domingo compra cajeta
+                en el mercado mas grande del pais en San Juan de los Lagos.
               </City>
             </SwiperSlide>
             <SwiperSlide>
-              <City variant="end" city="Vallarta">
-                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-                quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-                mentitum.
+              <City city="Vallarta" variant="vallarta">
+                Esta ciudad costera es caracterizada por sus hermosas playas de reconocimiento
+                mundial con un centro histórico que te encantará. Recorré el malecón y disfruta de
+                las actividades acuáticas que te ofrece. No olvides visitar las playas de la riviera
+                como Sayulita, Punta Mita, San Pancho, y Guayabitos; no te querrás ir.
               </City>
             </SwiperSlide>
           </Swiper>
