@@ -28,10 +28,21 @@ export default function Wedding() {
               height="387.45"
             />
           </span>
-          <p className="text-center">
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
-            quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit
-            mentitum.
+          <p>
+            La primera vez que sus caminos se cruzaron fue en el 2008 cuando estudiaban en la misma
+            prepa, mantuvieron una gran amistad, pero en 2015 sus caminos se terminarian de separar,
+            estando una persona en Monterrey y la otra en Guadalajara, pero el destino no iba a
+            dejar que esto se interpusiera.
+          </p>
+          <p>
+            En Julio de 2016 Vero fue a Guadalajara a tomar parte de sus pr&aacute;cticas
+            cl&iacute;nicas. Un S&aacute;bado por la mañana, ella estaba visitando unos
+            departamentos para vivir, cuando de pronto al pasar por una calle ve a Jordan saliendo
+            de su departamento. Aqu&iacute; fue donde todo comenz&oacute;.
+          </p>
+          <p>
+            Ahora estan por unir sus vidas para siempre, y entre los nervios y la felicidad,
+            est&aacute;n listos para dar entre gran paso!
           </p>
         </Container>
         <Divider />
@@ -65,12 +76,11 @@ export default function Wedding() {
           <div className="flex flex-col">
             <Event variant="start" title="Ceremonia Religiosa" time="6:00pm - 7:00pm">
               ¡Nos casamos! La ceremonia se realizará en la capilla de la hacienda auspiciada por el
-              sacerdote Panchito
+              monseñor Alfonso Gerardo Miranda Guardiola.
             </Event>
             <Event variant="middle" title="Coctel de Bienvenida" time="7:00pm - 8:00am">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus donec turpis at risus
-              egestas scelerisque et amet nunc. Venenatis consectetur pulvinar sit vel non integer
-              erat. Aliquet duis nunc duis elementum.
+              Todos están invitados al coctel de bienvenida que se ofrecerá despues de la ceremonia
+              religiosa. ¡Estaremos saludando y disfrutando del evento con todos!
             </Event>
             <Event variant="end" title="Recepción" time="8:00pm - 2:00am">
               ¡Es hora de la fiesta! Acompañanos a celebrar y a bailar toda la noche.
