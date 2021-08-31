@@ -5,6 +5,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
+        <meta property="og:title" content="Boda Jordan &amp; Vero" />
+        <meta property="og:description" content="Marzo 19, 2022. Guadalajara, Jalisco." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://jordanyvero.com" />
+
         <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
