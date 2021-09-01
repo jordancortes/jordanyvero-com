@@ -1,4 +1,14 @@
-const Input = ({ children, defaultValue, name, type, pattern, label, placeholder, className }) => {
+const Input = ({
+  children,
+  defaultValue,
+  name,
+  type,
+  pattern,
+  label,
+  placeholder,
+  className,
+  onChange,
+}) => {
   let l_class =
     "p-2 w-full border border-gray-300 rounded-sm shadow-md block" +
     (className !== undefined ? " " + className : "");
@@ -18,6 +28,7 @@ const Input = ({ children, defaultValue, name, type, pattern, label, placeholder
           pattern={pattern}
           placeholder={placeholder}
           className={l_class}
+          onChange={onChange}
         ></input>
       )}
     </div>
