@@ -14,9 +14,41 @@ import Header from "../../components/Header";
 import IconContent from "../../components/IconContent";
 import Tagline from "../../components/Tagline";
 import City from "../../components/City";
+import { useQuery } from "@apollo/client";
+import { getInvitation } from "../../graphql/queries";
+import { useEffect } from "react";
+import InvitationNotFound from "../../components/InvitationNotFound";
+import Loading from "../../components/Loading";
 
-export default function Wedding() {
-  return (
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      code: context.query.code || 0,
+    },
+  };
+}
+
+export default function Wedding({ code }) {
+  const { loading, error, data } = useQuery(getInvitation, {
+    variables: {
+      code,
+    },
+  });
+
+  useEffect(() => {
+    console.log("inv0", loading);
+    if (data) {
+      console.log("inv", data.invitation);
+    } else {
+      console.log("inv_e", error);
+    }
+  }, [data]);
+
+  return loading === true ? (
+    <Loading />
+  ) : data.invitation === null ? (
+    <InvitationNotFound code={code} />
+  ) : (
     <div>
       <Head>
         <title>Boda Jordan&amp;Vero | Informaci&oacute;n</title>

@@ -3,14 +3,16 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import { useState } from "react";
 
 export default function Home() {
+  const [code, setCode] = useState("");
   const router = useRouter();
 
   const handleGoToWedding = async (e) => {
     e.preventDefault();
 
-    router.push({ pathname: "/wedding" });
+    router.push({ pathname: "/wedding", query: { code } });
   };
 
   return (
@@ -60,7 +62,13 @@ export default function Home() {
         </p>
 
         <form className="flex space-x-3" onSubmit={handleGoToWedding}>
-          <Input type="text" placeholder="C&oacute;digo"></Input>
+          <Input
+            type="text"
+            placeholder="C&oacute;digo"
+            onChange={(e) => {
+              setCode(e.target.value.toUpperCase());
+            }}
+          ></Input>
           <Button className="flex-shrink-0">Ver invitaci&oacute;n</Button>
         </form>
       </div>

@@ -37,6 +37,11 @@ export default function Credits() {
               www.flaticon.com
             </a>
           </li>
+          <li>
+            <a href="https://loading.io/icon/" title="loading.io">
+              icon &#39;heart&#39; from loading.io
+            </a>
+          </li>
         </ul>
         <h3>Ornaments</h3>
         <ul className="list-disc list-inside pt-1 pb-4">
