@@ -23,33 +23,35 @@ export default function Invitation() {
     router.push({ pathname: "./confirmation" });
   };
 
-  const cleanContactDetails = () => {
-    document.getElementsByName("email")[0].value = null;
-    document.getElementsByName("phone1")[0].value = null;
-    document.getElementsByName("phone2")[0].value = null;
+  const cleanContactDetails = (elements) => {
+    elements["email"].value = null;
+    elements["primary_phone"].value = null;
+    elements["secondary_phone"].value = null;
 
     document.querySelector("#no-guest-message").classList.remove("hidden");
     document.querySelector("#guests-contact-details").classList.add("hidden");
     document.querySelector("#guests-wedding-details").classList.add("hidden");
   };
 
-  const cleanGuestDetails = (order) => {
+  const cleanGuestDetails = (elements, order) => {
     // cleanup fields
-    document.getElementsByName("guest-" + order + "-name")[0].value = null;
-    document.getElementsByName("guest-" + order + "-dish")[0].value = "meat";
-    document.getElementsByName("guest-" + order + "-transport")[0].value = "false";
-    document.getElementsByName("guest-" + order + "-allergies")[0].value = null;
+    elements["name"][order].value = null;
+    elements["diet"][order].value = "meat";
+    elements["transport"][order].value = "false";
+    elements["allergies"][order].value = null;
 
     // hide the whole section
     document.querySelector("#guest-" + order).classList.add("hidden");
   };
 
   useEffect(() => {
+    let form = document.querySelector("form");
+
     if (assistance === "0") {
-      cleanContactDetails();
+      cleanContactDetails(form.elements);
 
       for (let i = 0; i < maxAssistance; i++) {
-        cleanGuestDetails(i);
+        cleanGuestDetails(form.elements, i);
       }
     } else {
       // Show only needed guests
@@ -57,7 +59,7 @@ export default function Invitation() {
         if (assistance > guest.dataset.order) {
           document.querySelector("#guest-" + guest.dataset.order).classList.remove("hidden");
         } else {
-          cleanGuestDetails(guest.dataset.order);
+          cleanGuestDetails(form.elements, guest.dataset.order);
         }
       });
 
@@ -85,6 +87,7 @@ export default function Invitation() {
             label="Confirmo que asistir&aacute;n a la boda:"
             onChange={(e) => setAssistance(e.target.value)}
             defaultValue={assistance}
+            name="assistance"
           >
             {[...Array(maxAssistance + 1)].map((v, idx) => (
               <option key={idx} value={idx}>
@@ -97,13 +100,13 @@ export default function Invitation() {
             <div className="space-y-4">
               <Input name="email" label="Email" type="email"></Input>
               <Input
-                name="phone1"
+                name="primary_phone"
                 label="Tel&eacute;fono #1"
                 type="number"
                 pattern="[0-9]*"
               ></Input>
               <Input
-                name="phone2"
+                name="secondary_phone"
                 label="Tel&eacute;fono #2"
                 type="number"
                 pattern="[0-9]*"
@@ -118,7 +121,7 @@ export default function Invitation() {
               Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
               sección de regalos)
             </p>
-            <Input label="Mensaje" type="area"></Input>
+            <Input name="message" label="Mensaje" type="area"></Input>
           </div>
 
           <div id="guests-wedding-details" className="space-y-4">
