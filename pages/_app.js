@@ -1,8 +1,9 @@
+import Head from "next/head";
+import { AppContextProvider } from "../util/AppContext";
 import { RealmContextProvider } from "../util/RealmContext";
 import { RealmApolloContextProvider } from "../util/RealmApolloContext";
-import "../styles/globals.css";
-import Head from "next/head";
 import { REALM_APP_ID } from "../secrets/variables";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -38,7 +39,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <RealmContextProvider appId={REALM_APP_ID}>
         <RealmApolloContextProvider>
-          <Component {...pageProps} />
+          <AppContextProvider>
+            <Component {...pageProps} />
+          </AppContextProvider>
         </RealmApolloContextProvider>
       </RealmContextProvider>
     </div>

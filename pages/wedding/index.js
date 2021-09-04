@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Head from "next/head";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import { useQuery } from "@apollo/client";
 import { Autoplay, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useContext, useEffect, useState } from "react";
+import AppContext from "../../util/AppContext";
+import City from "../../components/City";
 import Container from "../../components/Container";
 import Divider from "../../components/Divider";
 import Event from "../../components/Event";
@@ -12,13 +13,13 @@ import Footer from "../../components/Footer";
 import Gift from "../../components/Gift";
 import Header from "../../components/Header";
 import IconContent from "../../components/IconContent";
-import Tagline from "../../components/Tagline";
-import City from "../../components/City";
-import { useQuery } from "@apollo/client";
-import { getInvitation } from "../../graphql/queries";
-import { useEffect } from "react";
 import InvitationNotFound from "../../components/InvitationNotFound";
 import Loading from "../../components/Loading";
+import Tagline from "../../components/Tagline";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+import { getInvitation } from "../../graphql/queries";
 
 export async function getServerSideProps(context) {
   return {
@@ -29,6 +30,8 @@ export async function getServerSideProps(context) {
 }
 
 export default function Wedding({ code }) {
+  const { invitationQuery, setInvitationQuery } = useContext(AppContext);
+
   const { loading, error, data } = useQuery(getInvitation, {
     variables: {
       code,
@@ -36,11 +39,10 @@ export default function Wedding({ code }) {
   });
 
   useEffect(() => {
-    console.log("inv0", loading);
     if (data) {
-      console.log("inv", data.invitation);
-    } else {
-      console.log("inv_e", error);
+      if (data.invitation && invitationQuery === undefined) {
+        setInvitationQuery(data.invitation);
+      }
     }
   }, [data]);
 

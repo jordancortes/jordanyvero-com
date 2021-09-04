@@ -1,6 +1,6 @@
-const Button = ({ children, onClick, type, variant, className }) => {
+const Button = ({ children, onClick, type, variant, className, disabled = false }) => {
   let l_primary_class =
-    "py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm" +
+    "py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm disabled:opacity-50 disabled:cursor-not-allowed" +
     (className !== undefined ? " " + className : "");
 
   let l_secondary_class =
@@ -11,7 +11,7 @@ const Button = ({ children, onClick, type, variant, className }) => {
   let l_class = variant === "secondary" ? l_secondary_class : l_primary_class;
 
   return (
-    <button type={l_type} className={l_class} onClick={onClick}>
+    <button type={l_type} className={l_class} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

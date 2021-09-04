@@ -17,7 +17,7 @@ const Input = ({
     <div className="space-y-1">
       {label ? <label htmlFor={name}>{label}</label> : ""}
       {type === "area" ? (
-        <textarea name={name} rows="3" className={l_class}>
+        <textarea name={name} rows="3" className={l_class} defaultValue={defaultValue}>
           {children}
         </textarea>
       ) : (
