@@ -2,14 +2,13 @@ import { useState, useEffect, useContext } from "react";
 import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import RealmAppContext from "./RealmContext";
 import * as Realm from "realm-web";
-import { API_KEY, URI } from "../secrets/variables";
 
-const createRealmApolloClient = (app) => {
+const createRealmApolloClient = (app, apiKey, uri) => {
   const link = new HttpLink({
-    uri: URI,
+    uri: uri,
     fetch: async (uri, options) => {
       if (!app.currentUser) {
-        await app.logIn(Realm.Credentials.apiKey(API_KEY));
+        await app.logIn(Realm.Credentials.apiKey(apiKey));
 
         if (!app.currentUser) {
           throw new Error("Must be logged in to use the GraphQL API");
@@ -26,9 +25,9 @@ const createRealmApolloClient = (app) => {
   return new ApolloClient({ link, cache: new InMemoryCache({ addTypename: false }) });
 };
 
-export const RealmApolloContextProvider = ({ children }) => {
+export const RealmApolloContextProvider = ({ apiKey, uri, children }) => {
   const realmCtx = useContext(RealmAppContext);
-  const [client, setClient] = useState(createRealmApolloClient(realmCtx.app));
+  const [client, setClient] = useState(createRealmApolloClient(realmCtx.app, apiKey, uri));
 
   return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };

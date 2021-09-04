@@ -2,7 +2,6 @@ import Head from "next/head";
 import { AppContextProvider } from "../util/AppContext";
 import { RealmContextProvider } from "../util/RealmContext";
 import { RealmApolloContextProvider } from "../util/RealmApolloContext";
-import { REALM_APP_ID } from "../secrets/variables";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -37,8 +36,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <RealmContextProvider appId={REALM_APP_ID}>
-        <RealmApolloContextProvider>
+      <RealmContextProvider appId={process.env.NEXT_PUBLIC_REALM_APP_ID}>
+        <RealmApolloContextProvider
+          apiKey={process.env.NEXT_PUBLIC_API_KEY}
+          uri={process.env.NEXT_PUBLIC_REALM_URI}
+        >
           <AppContextProvider>
             <Component {...pageProps} />
           </AppContextProvider>
