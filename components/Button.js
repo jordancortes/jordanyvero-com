@@ -1,6 +1,6 @@
 const Button = ({ children, onClick, type, variant, className, disabled = false }) => {
   let l_primary_class =
-    "py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm disabled:opacity-50 disabled:cursor-not-allowed" +
+    "py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-primary-light focus:ring-offset-1 hover:bg-primary-dark" +
     (className !== undefined ? " " + className : "");
 
   let l_secondary_class =
