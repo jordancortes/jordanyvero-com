@@ -8,6 +8,7 @@ const Input = ({
   placeholder,
   className,
   onChange,
+  required,
 }) => {
   let l_class =
     "p-2 w-full border border-gray-300 rounded-sm shadow-md block" +
@@ -29,6 +30,7 @@ const Input = ({
           placeholder={placeholder}
           className={l_class}
           onChange={onChange}
+          required={required}
         ></input>
       )}
     </div>

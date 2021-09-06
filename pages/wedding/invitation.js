@@ -60,6 +60,9 @@ export default function Invitation() {
         // Show only needed guests
         Array.from(document.querySelectorAll(".guest")).forEach((guest) => {
           if (assistance > guest.dataset.order) {
+            // re-add required conditions
+            form.elements["name"][guest.dataset.order].required = true;
+
             document.querySelector("#guest-" + guest.dataset.order).classList.remove("hidden");
           } else {
             cleanGuestDetails(form.elements, guest.dataset.order);
@@ -68,6 +71,10 @@ export default function Invitation() {
 
         // Clean message text
         form.elements.message.value = null;
+
+        // re-add contact required conditions
+        form.elements["email"].required = true;
+        form.elements["primary_phone"].required = true;
 
         // Handle rest of content
         document.querySelector("#no-guest-message").classList.add("hidden");
@@ -94,6 +101,11 @@ export default function Invitation() {
     elements["primary_phone"].value = null;
     elements["secondary_phone"].value = null;
 
+    // remove required conditions
+    elements["email"].required = false;
+    elements["primary_phone"].required = false;
+
+    // hide sections
     document.querySelector("#no-guest-message").classList.remove("hidden");
     document.querySelector("#guests-contact-details").classList.add("hidden");
     document.querySelector("#guests-wedding-details").classList.add("hidden");
@@ -105,6 +117,9 @@ export default function Invitation() {
     elements["diet"][order].value = "meat";
     elements["transport"][order].value = "false";
     elements["allergies"][order].value = null;
+
+    // remove required conditions
+    elements["name"][order].required = false;
 
     // hide the whole section
     document.querySelector("#guest-" + order).classList.add("hidden");
@@ -143,6 +158,7 @@ export default function Invitation() {
                 label="Email"
                 type="email"
                 defaultValue={invitationQuery.email}
+                required
               ></Input>
               <Input
                 name="primary_phone"
@@ -150,6 +166,7 @@ export default function Invitation() {
                 type="number"
                 pattern="[0-9]*"
                 defaultValue={invitationQuery.primary_phone}
+                required
               ></Input>
               <Input
                 name="secondary_phone"

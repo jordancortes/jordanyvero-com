@@ -8,7 +8,7 @@ const GuestForm = ({ id, className, dataOrder, title, guestData }) => {
     <div id={id} data-order={dataOrder} className={l_class}>
       <h2 className="text-xl font-medium self-center">{title}</h2>
       <input type="hidden" name="guests" value=""></input>
-      <Input name={"name"} label="Nombre" defaultValue={guestData.name}></Input>
+      <Input name={"name"} label="Nombre" defaultValue={guestData.name} required></Input>
       <Select name={"diet"} label="Platillo" defaultValue={guestData.diet}>
         <option value="meat">Res / Pescado</option>
         <option value="vegetarian">Vegetariano</option>

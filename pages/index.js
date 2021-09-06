@@ -68,6 +68,7 @@ export default function Home() {
             onChange={(e) => {
               setCode(e.target.value.toUpperCase());
             }}
+            required
           ></Input>
           <Button className="flex-shrink-0">Ver invitaci&oacute;n</Button>
         </form>
