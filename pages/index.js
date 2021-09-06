@@ -6,11 +6,14 @@ import Input from "../components/Input";
 import { useState } from "react";
 
 export default function Home() {
-  const [code, setCode] = useState("");
   const router = useRouter();
+  const [code, setCode] = useState("");
+  const [isConfirmButtonBlocked, setIsConfirmButtonBlocked] = useState(false);
 
   const handleGoToWedding = async (e) => {
     e.preventDefault();
+
+    setIsConfirmButtonBlocked(true);
 
     router.push({ pathname: "/wedding", query: { code } });
   };
@@ -70,7 +73,9 @@ export default function Home() {
             }}
             required
           ></Input>
-          <Button className="flex-shrink-0">Ver invitaci&oacute;n</Button>
+          <Button className="flex-shrink-0" disabled={isConfirmButtonBlocked}>
+            Ver invitaci&oacute;n
+          </Button>
         </form>
       </div>
     </div>
