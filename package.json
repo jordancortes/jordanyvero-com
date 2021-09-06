@@ -2,6 +2,11 @@
   "name": "jordanyvero-com",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "Jordan Yerandi Cortes Guzman",
+    "email": "apps@jordancortes.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
