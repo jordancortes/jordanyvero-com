@@ -1,17 +1,17 @@
 import Head from "next/head";
 import Header from "../components/Header";
 
-export default function Credits() {
+export default function Attribution() {
   return (
     <div>
       <Head>
-        <title>Boda Jordan&amp;Vero | Cr&eacute;ditos</title>
+        <title>Boda Jordan&amp;Vero | Atribuci&oacute;n</title>
       </Head>
 
       <Header />
 
       <div className="flex flex-col px-4 pt-4">
-        <h2 className="text-center">Cr&eacute;ditos</h2>
+        <h2 className="text-center">Atribuci&oacute;n</h2>
         <h3>Backgrounds</h3>
         <ul className="list-disc list-inside pt-1 pb-4">
           <li>
