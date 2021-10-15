@@ -11,6 +11,7 @@ export const getInvitation = gql`
       assistance
       max_assistance
       submitted
+      message
       guests {
         name
         diet
