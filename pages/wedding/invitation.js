@@ -181,10 +181,16 @@ export default function Invitation() {
           <Divider />
 
           <div id="no-guest-message" className="space-y-4 hidden">
-            <p>
-              Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
-              sección de regalos)
-            </p>
+            <div className="flex flex-col items-center">
+              <video className="mb-5" width="288" height="288" loop playsInline muted autoPlay>
+                <source src="/videos/sad-kid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>
+                Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
+                sección de regalos)
+              </p>
+            </div>
             <Input
               name="message"
               label="Mensaje"
