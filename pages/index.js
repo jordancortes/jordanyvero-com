@@ -69,7 +69,7 @@ export default function Home() {
             type="text"
             placeholder="C&oacute;digo"
             onChange={(e) => {
-              setCode(e.target.value.toUpperCase());
+              setCode(e.target.value.toUpperCase().trim());
             }}
             required
           ></Input>
