@@ -13,7 +13,7 @@ const Header = ({ withButton }) => {
   };
 
   return (
-    <header className="px-2 py-3 border-b flex justify-between">
+    <header className="px-2 py-3 border-b flex justify-between md:px-6 md:py-4">
       <h1 onClick={handleGoLanding} className="text-primary font-cursive text-3xl cursor-pointer">
         J&amp;V
       </h1>

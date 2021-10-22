@@ -63,12 +63,12 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
   };
 
   return (
-    <div className="flex flex-col space-y-3">
-      <div className="flex space-x-2">
+    <div className="flex flex-col space-y-3 md:w-52">
+      <div className="flex space-x-2 md:self-center md:-ml-4">
         <div className="w-12 flex">{renderIcon(iconType)}</div>
         <h3>{title}</h3>
       </div>
-      <p>{children}</p>
+      <p className="md:text-center">{children}</p>
       {withLink ? (
         <a className="variant-secondary self-center" href={linkHref}>
           {linkTitle}

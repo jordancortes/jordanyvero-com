@@ -58,8 +58,8 @@ export default function Wedding({ code }) {
 
       <Header withButton />
       <div className="flex flex-col">
-        <Container>
-          <span className="flex">
+        <Container className="md:flex-row">
+          <span className="flex md:flex-shrink-0 md:order-last">
             <Image
               src="/images/wedding/our-story.jpg"
               alt="Foto decorada de los novios: Jordan y Vero"
@@ -67,41 +67,48 @@ export default function Wedding({ code }) {
               height="387.45"
             />
           </span>
-          <p>
-            La primera vez que sus caminos se cruzaron fue en el 2008 cuando estudiaban en la misma
-            prepa, mantuvieron una gran amistad, pero en 2015 sus caminos se terminarian de separar,
-            estando una persona en Monterrey y la otra en Guadalajara, pero el destino no iba a
-            dejar que esto se interpusiera.
-          </p>
-          <p>
-            En Julio de 2016 Vero fue a Guadalajara a tomar parte de sus pr&aacute;cticas
-            cl&iacute;nicas. Un S&aacute;bado por la mañana, ella estaba visitando unos
-            departamentos para vivir, cuando de pronto al pasar por una calle ve a Jordan saliendo
-            de su departamento. Aqu&iacute; fue donde todo comenz&oacute;.
-          </p>
-          <p>
-            Ahora estan por unir sus vidas para siempre, y entre los nervios y la felicidad,
-            est&aacute;n listos para dar entre gran paso!
-          </p>
+          <span className="flex flex-col space-y-4 md:mx-4">
+            <p>
+              La primera vez que sus caminos se cruzaron fue en el 2008 cuando estudiaban en la
+              misma prepa, mantuvieron una gran amistad, pero en 2015 sus caminos se terminarian de
+              separar, estando una persona en Monterrey y la otra en Guadalajara, pero el destino no
+              iba a dejar que esto se interpusiera.
+            </p>
+            <p>
+              En Julio de 2016 Vero fue a Guadalajara a tomar parte de sus pr&aacute;cticas
+              cl&iacute;nicas. Un S&aacute;bado por la mañana, ella estaba visitando unos
+              departamentos para vivir, cuando de pronto al pasar por una calle ve a Jordan saliendo
+              de su departamento. Aqu&iacute; fue donde todo comenz&oacute;.
+            </p>
+            <p>
+              Ahora estan por unir sus vidas para siempre, y entre los nervios y la felicidad,
+              est&aacute;n listos para dar entre gran paso!
+            </p>
+          </span>
         </Container>
         <Divider />
         <Container>
           <h2 id="place" className="uppercase">
             Lugar
           </h2>
-          <span className="flex">
-            <Image
-              src="/images/wedding/place.jpg"
-              alt="Foto de la hacienda"
-              width="343"
-              height="343"
-            />
+          <span className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center">
+            <span className="flex md:mr-8">
+              <Image
+                src="/images/wedding/place.jpg"
+                alt="Foto de la hacienda"
+                width="343"
+                height="343"
+              />
+            </span>
+            <span className="flex flex-col space-y-4 items-center">
+              <h3>Hacienda La Santa Cruz</h3>
+              <p>Carretera Colotlán Km 5.5, Zapopan, Jal.</p>
+              <img className="hidden md:block" src="https://via.placeholder.com/320x100" />
+              <a className="variant-secondary" href="https://goo.gl/maps/fJBzkcrBFf7pspEh6">
+                Ver en mapa
+              </a>
+            </span>
           </span>
-          <h3>Hacienda La Santa Cruz</h3>
-          <p>Carretera Colotlán Km 5.5, Zapopan, Jal.</p>
-          <a className="variant-secondary" href="https://goo.gl/maps/fJBzkcrBFf7pspEh6">
-            Ver en mapa
-          </a>
         </Container>
         <Divider />
         <Container className="bg-event bg-left bg-cover">
@@ -131,8 +138,8 @@ export default function Wedding({ code }) {
           <h2 id="important" className="uppercase">
             Importante
           </h2>
-          <div className="space-y-6 pb-4">
-            <IconContent iconType="dressCode" title="Código de Vestimenta">
+          <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
+            <IconContent iconType="dressCode" title="Vestimenta">
               Formal, evento al aire libre. No se permiten vestidos de colores claros o blancos.
             </IconContent>
             <IconContent iconType="forbidden" title="No Niños">
@@ -154,7 +161,7 @@ export default function Wedding({ code }) {
             Tu presencia es lo más importante para nosotros, pero si deseas obsequiarnos algo te
             compartimos las siguientes opciones:
           </p>
-          <div className="space-y-8">
+          <div className="flex space-x-8 md:space-x-12">
             <Gift
               iconType="gift"
               title="Liverpool"
@@ -177,6 +184,15 @@ export default function Wedding({ code }) {
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
             spaceBetween={50}
             className="w-full"
           >
@@ -220,27 +236,31 @@ export default function Wedding({ code }) {
           <h2 id="accomodation" className="uppercase">
             Hospedaje
           </h2>
-          <span className="flex">
-            <Image
-              src="/images/wedding/accomodation.jpg"
-              alt="Foto de hotel"
-              width="259"
-              height="259"
-            />
+          <span className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center">
+            <span className="flex md:mr-8">
+              <Image
+                src="/images/wedding/accomodation.jpg"
+                alt="Foto de hotel"
+                width="259"
+                height="259"
+              />
+            </span>
+            <span className="flex flex-col space-y-4 items-center md:w-64">
+              <p className="text-center">
+                Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara.
+              </p>
+              <a className="variant-secondary" href="/files/hotels.pdf">
+                Ver opciones en PDF
+              </a>
+            </span>
           </span>
-          <p className="text-center">
-            Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara.
-          </p>
-          <a className="variant-secondary" href="/files/hotels.pdf">
-            Ver opciones en PDF
-          </a>
         </Container>
         <Divider />
         <Container className="bg-transport bg-left bg-cover">
           <h2 id="transport" className="uppercase">
             Transporte
           </h2>
-          <div className="space-y-6 pb-4">
+          <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
             <IconContent
               iconType="flight"
               title="Vuelos"
@@ -266,7 +286,7 @@ export default function Wedding({ code }) {
           </div>
         </Container>
         <Divider />
-        <Container>
+        <Container className="md:pb-8">
           <h2 id="questions" className="uppercase">
             ¿Dudas?
           </h2>

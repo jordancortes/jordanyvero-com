@@ -22,12 +22,12 @@ const Event = ({ variant, title, time, children }) => {
           ""
         )}
       </div>
-      <div className="space-y-4 pb-9">
-        <div>
+      <div className="space-y-4 pb-9 md:flex md:w-full md:justify-between">
+        <div className="flex-shrink-0">
           <h3 className="text-xl font-medium leading-none">{title}</h3>
           <h4 className="text-lg font-light leading-none text-gray-600">{time}</h4>
         </div>
-        <p>{children}</p>
+        <p className="md:text-right">{children}</p>
       </div>
     </div>
   );
