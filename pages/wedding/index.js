@@ -111,7 +111,7 @@ export default function Wedding({ code }) {
           </span>
         </Container>
         <Divider />
-        <Container className="bg-event bg-left bg-cover">
+        <Container className="bg-event bg-left bg-no-repeat md:bg-contain md:bg-right">
           <h2 id="event" className="uppercase">
             Evento
           </h2>
@@ -134,7 +134,7 @@ export default function Wedding({ code }) {
           </div>
         </Container>
         <Divider />
-        <Container className="bg-important bg-right bg-cover">
+        <Container className="bg-important bg-right bg-cover md:bg-none">
           <h2 id="important" className="uppercase">
             Importante
           </h2>
@@ -256,7 +256,7 @@ export default function Wedding({ code }) {
           </span>
         </Container>
         <Divider />
-        <Container className="bg-transport bg-left bg-cover">
+        <Container className="bg-transport bg-bottom bg-no-repeat bg-cover md:bg-auto">
           <h2 id="transport" className="uppercase">
             Transporte
           </h2>
