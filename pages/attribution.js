@@ -38,6 +38,16 @@ export default function Attribution() {
             </a>
           </li>
           <li>
+            Icons made by{" "}
+            <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">
+              Good Ware
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </li>
+          <li>
             <a href="https://loading.io/icon/" title="loading.io">
               icon &#39;heart&#39; from loading.io
             </a>
