@@ -58,15 +58,59 @@ export default function Wedding({ code }) {
 
       <Header withButton />
       <div className="flex flex-col">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={true}
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          spaceBetween={50}
+          className="w-full"
+        >
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story1.jpg"
+              alt="Foto de sesion en campos de agave: Jordan y Vero"
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story2.jpg"
+              alt="Foto de sesion en campos de agave: Jordan y Vero"
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story3.jpg"
+              alt="Foto de sesion en campos de agave: Jordan y Vero"
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+        </Swiper>
         <Container className="md:flex-row">
-          <span className="flex md:flex-shrink-0 md:order-last">
+          {/* <span className="flex md:flex-shrink-0">
             <Image
               src="/images/wedding/our-story.jpg"
               alt="Foto decorada de los novios: Jordan y Vero"
-              width="343"
+              width="383"
               height="387.45"
+              objectFit="contain"
             />
-          </span>
+          </span> */}
           <span className="flex flex-col space-y-4 md:mx-4">
             <p>
               La primera vez que sus caminos se cruzaron fue en el 2008 cuando estudiaban en la
