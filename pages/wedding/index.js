@@ -147,7 +147,48 @@ export default function Wedding({ code }) {
             <span className="flex flex-col space-y-4 items-center">
               <h3>Hacienda La Santa Cruz</h3>
               <p>Carretera Colotlán Km 5.5, Zapopan, Jal.</p>
-              <img className="hidden md:block" src="https://via.placeholder.com/320x100" />
+              {/* https://www.timeanddate.com/weather/mexico/guadalajara/historic?month=3&year=2021 */}
+              <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
+                  <Image
+                    src="/images/weather/cloudy.png"
+                    alt="clima tarde nublado"
+                    width="68"
+                    height="48"
+                    layout="fixed"
+                  />
+                  <div>
+                    <p>6:00 pm</p>
+                    <p>26 °C</p>
+                  </div>
+                </div>
+                <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
+                  <Image
+                    src="/images/weather/moon.png"
+                    alt="clima noche despejado"
+                    width="48"
+                    height="48"
+                    layout="fixed"
+                  />
+                  <div>
+                    <p>9:00 pm</p>
+                    <p>21 °C</p>
+                  </div>
+                </div>
+                <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
+                  <Image
+                    src="/images/weather/moon.png"
+                    alt="clima noche despejado"
+                    width="48"
+                    height="48"
+                    layout="fixed"
+                  />
+                  <div>
+                    <p>12:00 am</p>
+                    <p>14 °C</p>
+                  </div>
+                </div>
+              </div>
               <a className="variant-secondary" href="https://goo.gl/maps/fJBzkcrBFf7pspEh6">
                 Ver en mapa
               </a>
