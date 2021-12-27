@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useContext, useEffect, useState } from "react";
 import AppContext from "../../util/AppContext";
 import City from "../../components/City";
+import Accomodation from "../../components/Accomodation";
 import Container from "../../components/Container";
 import Divider from "../../components/Divider";
 import Event from "../../components/Event";
@@ -321,24 +322,32 @@ export default function Wedding({ code }) {
           <h2 id="accomodation" className="uppercase">
             Hospedaje
           </h2>
-          <span className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center">
-            <span className="flex md:mr-8">
-              <Image
-                src="/images/wedding/accomodation.jpg"
-                alt="Foto de hotel"
-                width="259"
-                height="259"
-              />
-            </span>
-            <span className="flex flex-col space-y-4 items-center md:w-64">
-              <p className="text-center">
-                Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara.
-              </p>
-              <a className="variant-secondary" href="/files/hotels.pdf">
-                Ver opciones en PDF
-              </a>
-            </span>
-          </span>
+          <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
+            <p className="text-center">
+              Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara. Al hacer
+              tu reservación puedes proporcionar el código correspondiente para obtener una tarifa
+              preferencial. Recuerda que los hoteles tienen opciones de transporte privado, pregunta
+              en recepción por las opciones disponibles.
+            </p>
+            <Accomodation
+              title="FCH Providencia"
+              code="PENDIENTE"
+              url="http://fch-hotels.com/providencia"
+            >
+              Ubicado en el corazón de Providencia, una zona muy popular en Guadalajara, FCH es un
+              hotel boutique con cientos de restaurantes y negocios a unos cuantos pasos. El hotel
+              es solo para adultos (mayor a 18 años).
+            </Accomodation>
+            <Accomodation
+              title="Hilton Midtown"
+              code="PENDIENTE"
+              url="https://www.hilton.com/en/hotels/gdlgmhh-hilton-guadalajara-midtown/"
+            >
+              Ubicado en una de las plazas comerciales mas conocidas de la ciudad, Hilton es un
+              hotel de alto prestigio. La plaza cuenta con decenas de restaurantes y tiendas
+              departamentales, asi como un supermercado.
+            </Accomodation>
+          </div>
         </Container>
         <Divider />
         <Container className="bg-transport bg-bottom bg-no-repeat bg-cover md:bg-auto">
@@ -360,7 +369,7 @@ export default function Wedding({ code }) {
             <IconContent iconType="toWedding" title="Rumbo a la boda">
               Toma en cuenta el tiempo aproximado de llegada al lugar, ya sea que consigas un
               transporte privado (Uber, DiDi) o vayas en tu propio vehiculo (valet parking
-              disponible).
+              disponible). Recuerda preguntar en el hotel por opciones de transporte disponibles.
             </IconContent>
             <IconContent iconType="fromWedding" title="De regreso al hotel">
               Como la hacienda está retirada de la ciudad, a la hora que termine la fiesta no habrá
