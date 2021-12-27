@@ -252,13 +252,11 @@ export default function Wedding({ code }) {
           <div className="flex space-x-8 md:space-x-12">
             <Gift
               iconType="gift"
-              title="Liverpool"
+              title="Amazon"
               withLink
               linkTitle="Ver Mesa"
-              linkHref="https://mesaderegalos.liverpool.com.mx/milistaderegalos/50629522"
-            >
-              Mesa #50629522
-            </Gift>
+              linkHref="https://www.amazon.com.mx/wedding/elda-veronica-garcia-reyes-jordan-yerandi-cortes-guzman-zapopan-march-2022/registry/1DRSNXXUL8WRR"
+            ></Gift>
             <Gift iconType="cash" title="Efectivo">
               El dia del evento
             </Gift>
