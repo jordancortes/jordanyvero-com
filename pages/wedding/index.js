@@ -207,12 +207,14 @@ export default function Wedding({ code }) {
           <Tagline>S&aacute;bado, 19 de Marzo de 2022</Tagline>
           <div className="flex flex-col">
             <Event variant="start" title="Ceremonia Religiosa" time="6:00pm - 7:00pm">
-              ¡Nos casamos! La ceremonia se realizará en la capilla de la hacienda auspiciada por el
-              monseñor Alfonso Gerardo Miranda Guardiola.
+              ¡Nos casamos! Los invitamos a acompañarnos en nuestro enlace religioso. La ceremonia
+              se realizará en la capilla de la hacienda auspiciada por el monseñor Alfonso Gerardo
+              Miranda Guardiola.
             </Event>
             <Event variant="middle" title="Coctel de Bienvenida" time="7:00pm - 8:00am">
-              Todos están invitados al coctel de bienvenida que se ofrecerá despues de la ceremonia
-              religiosa. ¡Estaremos saludando y disfrutando del evento con todos!
+              ¡Nada como un buen coctel para los nervios después de la boda! Nos moveremos al área
+              del coctel para saludarnos, conversar, tomarnos fotos, y calentar motores para el
+              baile.
             </Event>
             <Event variant="end" title="Recepción" time="8:00pm - 2:00am">
               ¡Es hora de la fiesta! Acompañanos a celebrar y a bailar toda la noche.
