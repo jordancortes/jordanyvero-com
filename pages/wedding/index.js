@@ -103,15 +103,6 @@ export default function Wedding({ code }) {
           </SwiperSlide>
         </Swiper>
         <Container className="md:flex-row">
-          {/* <span className="flex md:flex-shrink-0">
-            <Image
-              src="/images/wedding/our-story.jpg"
-              alt="Foto decorada de los novios: Jordan y Vero"
-              width="383"
-              height="387.45"
-              objectFit="contain"
-            />
-          </span> */}
           <span className="flex flex-col space-y-4 md:mx-4">
             <p>
               La primera vez que sus caminos se cruzaron fue en el 2008 cuando estudiaban en la
