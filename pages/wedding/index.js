@@ -32,6 +32,7 @@ export async function getServerSideProps(context) {
 
 export default function Wedding({ code }) {
   const { invitationQuery, setInvitationQuery } = useContext(AppContext);
+  const [swiperOurStory, setSwiperOurStory] = useState();
 
   const { loading, error, data } = useQuery(getInvitation, {
     variables: {
@@ -57,11 +58,18 @@ export default function Wedding({ code }) {
         <title>Boda Jordan&amp;Vero | Informaci&oacute;n</title>
       </Head>
 
-      <Header withButton />
+      <Header withButton swiperOurStory={swiperOurStory} />
       <div className="flex flex-col">
         <Swiper
           modules={[Autoplay]}
-          autoplay={true}
+          onSwiper={(swiper) => {
+            setSwiperOurStory(swiper);
+          }}
+          autoplay={{
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          loopAdditionalSlides={5}
           slidesPerView={1}
           breakpoints={{
             768: {
@@ -71,7 +79,7 @@ export default function Wedding({ code }) {
               slidesPerView: 4,
             },
           }}
-          spaceBetween={50}
+          spaceBetween={0}
           className="w-full"
         >
           <SwiperSlide>

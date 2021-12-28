@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
 import Button from "./Button";
 
-const Header = ({ withButton }) => {
+const Header = ({ withButton, swiperOurStory }) => {
   const router = useRouter();
 
   const handleGoToInvitation = async () => {
+    // prevent autoplay to fail when moving to the next screen
+    // (swiper is now undefined in the next screen)
+    swiperOurStory.autoplay.stop();
+
     router.push({ pathname: "/wedding/invitation" });
   };
 
