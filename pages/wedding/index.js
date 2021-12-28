@@ -313,13 +313,13 @@ export default function Wedding({ code }) {
           <h2 id="accomodation" className="uppercase">
             Hospedaje
           </h2>
+          <p className="text-center">
+            Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara. Al hacer tu
+            reservación puedes proporcionar el código correspondiente para obtener una tarifa
+            preferencial. Recuerda que los hoteles tienen opciones de transporte privado, pregunta
+            en recepción por las opciones disponibles.
+          </p>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
-            <p className="text-center">
-              Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara. Al hacer
-              tu reservación puedes proporcionar el código correspondiente para obtener una tarifa
-              preferencial. Recuerda que los hoteles tienen opciones de transporte privado, pregunta
-              en recepción por las opciones disponibles.
-            </p>
             <Accomodation
               title="FCH Providencia"
               code="PENDIENTE"
