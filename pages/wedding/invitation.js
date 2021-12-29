@@ -73,7 +73,6 @@ export default function Invitation() {
         form.elements.message.value = null;
 
         // re-add contact required conditions
-        form.elements["email"].required = true;
         form.elements["primary_phone"].required = true;
 
         // Handle rest of content
@@ -157,7 +156,6 @@ export default function Invitation() {
                 label="Email"
                 type="email"
                 defaultValue={invitationQuery.email}
-                required
               ></Input>
               <Input
                 name="primary_phone"
