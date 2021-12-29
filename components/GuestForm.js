@@ -14,14 +14,6 @@ const GuestForm = ({ id, className, dataOrder, title, guestData }) => {
         <option value="vegetarian">Vegetariano</option>
         <option value="vegan">Vegano</option>
       </Select>
-      <Select
-        name={"transport"}
-        label="Necesito transporte finalizando el evento"
-        defaultValue={guestData.transport}
-      >
-        <option value="false">No</option>
-        <option value="true">Si</option>
-      </Select>
       <Input
         name={"allergies"}
         label="Alergias"

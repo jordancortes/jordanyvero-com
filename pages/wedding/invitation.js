@@ -115,7 +115,6 @@ export default function Invitation() {
     // cleanup fields
     elements["name"][order].value = null;
     elements["diet"][order].value = "meat";
-    elements["transport"][order].value = "false";
     elements["allergies"][order].value = null;
 
     // remove required conditions

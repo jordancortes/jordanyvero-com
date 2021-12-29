@@ -15,7 +15,6 @@ export const updateOneInvitationMutation = gql`
       guests {
         name
         diet
-        transport
         allergies
       }
     }
