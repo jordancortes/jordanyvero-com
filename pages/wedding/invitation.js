@@ -151,12 +151,10 @@ export default function Invitation() {
 
           <div id="guests-contact-details">
             <div className="space-y-4">
-              <Input
-                name="email"
-                label="Email"
-                type="email"
-                defaultValue={invitationQuery.email}
-              ></Input>
+              <p>
+                Necesitamos al menos un teléfono donde podamos comunicarnos para confirmar la
+                asistencia unos dias antes de la boda
+              </p>
               <Input
                 name="primary_phone"
                 label="Tel&eacute;fono #1"
@@ -171,6 +169,15 @@ export default function Invitation() {
                 type="number"
                 pattern="[0-9]*"
                 defaultValue={invitationQuery.secondary_phone}
+              ></Input>
+              <p>
+                El correo electrónico es opcional y lo usariamos solo para mandar avisos de la boda
+              </p>
+              <Input
+                name="email"
+                label="Email"
+                type="email"
+                defaultValue={invitationQuery.email}
               ></Input>
             </div>
           </div>
