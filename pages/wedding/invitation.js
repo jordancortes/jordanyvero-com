@@ -132,7 +132,7 @@ export default function Invitation() {
       <Header />
       <div className="px-3">
         <div className="flex flex-col items-center py-4 space-y-2">
-          <h2>¡Hola {invitationQuery.family_name}!</h2>
+          <h2>&iexcl;Hola {invitationQuery.family_name}!</h2>
           <p>Tenemos {invitationQuery.max_assistance} lugares esperando por ustedes.</p>
         </div>
         <form onSubmit={handleSubmitInvitation} className="flex flex-col space-y-4 pb-4">
@@ -144,7 +144,7 @@ export default function Invitation() {
           >
             {[...Array(invitationQuery.max_assistance + 1)].map((v, idx) => (
               <option key={idx} value={idx}>
-                {idx === 0 ? "No asistiré" : idx + (idx === 1 ? " persona" : " personas")}
+                {idx === 0 ? "No asistir&eacute;" : idx + (idx === 1 ? " persona" : " personas")}
               </option>
             ))}
           </Select>
@@ -152,7 +152,7 @@ export default function Invitation() {
           <div id="guests-contact-details">
             <div className="space-y-4">
               <p>
-                Necesitamos al menos un teléfono donde podamos comunicarnos para confirmar la
+                Necesitamos al menos un tel&eacute;fono donde podamos comunicarnos para confirmar la
                 asistencia unos dias antes de la boda
               </p>
               <Input
@@ -171,7 +171,8 @@ export default function Invitation() {
                 defaultValue={invitationQuery.secondary_phone}
               ></Input>
               <p>
-                El correo electrónico es opcional y lo usariamos solo para mandar avisos de la boda
+                El correo electr&oacute;nico es opcional y lo usariamos solo para mandar avisos de
+                la boda
               </p>
               <Input
                 name="email"
@@ -192,7 +193,7 @@ export default function Invitation() {
               </video>
               <p>
                 Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
-                sección de regalos)
+                secci&oacute;n de regalos)
               </p>
             </div>
             <Input

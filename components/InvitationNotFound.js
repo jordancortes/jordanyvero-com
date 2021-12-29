@@ -17,7 +17,7 @@ const InvitationNotFound = ({ code }) => {
         <h2 className="mb-4">Esta invitaci&oacute;n no existe</h2>
         <Image
           src="/images/global/icon-letter.svg"
-          alt="Icono de invitación"
+          alt="Icono de invitaci&oacute;n"
           width="100"
           height="100"
         />

@@ -34,14 +34,14 @@ export default function Confirmation() {
       <Header />
       <div className="px-4">
         <div className="flex flex-col items-center text-center space-y-4 pt-4">
-          <h2>¡Gracias por confirmar tu asistencia!</h2>
+          <h2>&iexcl;Gracias por confirmar tu asistencia!</h2>
           {assistance !== 0 ? (
             <div className="space-y-4">
               <p>
                 Si necesitas hacer un cambio aun lo puedes hacer y te invitamos a ver el resto de la
                 informacion.
               </p>
-              <p>¡Te esperamos el dia de la boda!</p>
+              <p>&iexcl;Te esperamos el dia de la boda!</p>
             </div>
           ) : (
             ""

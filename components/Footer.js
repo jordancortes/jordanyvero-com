@@ -29,7 +29,7 @@ const Footer = () => {
         <a href="#city">La Ciudad</a>
         <a href="#accomodation">Hospedaje</a>
         <a href="#transport">Transporte</a>
-        <a href="#questions">¿Dudas?</a>
+        <a href="#questions">&iquest;Dudas?</a>
       </span>
     </div>
   );

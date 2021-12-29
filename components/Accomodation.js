@@ -28,7 +28,7 @@ const Accomodation = ({ children, title, code, url }) => {
     <div className="flex flex-col items-center space-y-2">
       <h3>{title}</h3>
       {renderAccomodation(title)}
-      <h4 className="font-medium">Código: {code}</h4>
+      <h4 className="font-medium">C&oacute;digo: {code}</h4>
       <p className="text-center">{children}</p>
       <a className="variant-secondary" href={url}>
         Ver detalles

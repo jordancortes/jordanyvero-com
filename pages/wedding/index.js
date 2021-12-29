@@ -120,7 +120,7 @@ export default function Wedding({ code }) {
             </p>
             <p>
               En Julio de 2016 Vero fue a Guadalajara a tomar parte de sus pr&aacute;cticas
-              cl&iacute;nicas. Un S&aacute;bado por la mañana, ella estaba visitando unos
+              cl&iacute;nicas. Un S&aacute;bado por la ma&ntilde;ana, ella estaba visitando unos
               departamentos para vivir, cuando de pronto al pasar por una calle ve a Jordan saliendo
               de su departamento. Aqu&iacute; fue donde todo comenz&oacute;.
             </p>
@@ -146,10 +146,10 @@ export default function Wedding({ code }) {
             </span>
             <span className="flex flex-col space-y-4 items-center">
               <h3>Hacienda La Santa Cruz</h3>
-              <p>Carretera Colotlán Km 5.5, Zapopan, Jal.</p>
+              <p>Carretera Colotl&aacute;n Km 5.5, Zapopan, Jal.</p>
               <p>
-                (en carretera a Colotlán das vuelta a la derecha en calle Gaviotas y al fondo hay un
-                portón, cruzas el portón y la hacienda está al fondo)
+                (en carretera a Colotl&aacute;n das vuelta a la derecha en calle Gaviotas y al fondo
+                hay un port&oacute;n, cruzas el port&oacute;n y la hacienda est&aacute; al fondo)
               </p>
               {/* https://www.timeanddate.com/weather/mexico/guadalajara/historic?month=3&year=2021 */}
               <div className="grid grid-cols-3 gap-8">
@@ -163,7 +163,7 @@ export default function Wedding({ code }) {
                   />
                   <div>
                     <p>6:00 pm</p>
-                    <p>26 °C</p>
+                    <p>26 &deg;C</p>
                   </div>
                 </div>
                 <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
@@ -176,7 +176,7 @@ export default function Wedding({ code }) {
                   />
                   <div>
                     <p>9:00 pm</p>
-                    <p>21 °C</p>
+                    <p>21 &deg;C</p>
                   </div>
                 </div>
                 <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
@@ -189,7 +189,7 @@ export default function Wedding({ code }) {
                   />
                   <div>
                     <p>12:00 am</p>
-                    <p>14 °C</p>
+                    <p>14 &deg;C</p>
                   </div>
                 </div>
               </div>
@@ -210,17 +210,17 @@ export default function Wedding({ code }) {
           <Tagline>S&aacute;bado, 19 de Marzo de 2022</Tagline>
           <div className="flex flex-col">
             <Event variant="start" title="Ceremonia Religiosa" time="6:00pm - 7:00pm">
-              ¡Nos casamos! Los invitamos a acompañarnos en nuestro enlace religioso. La ceremonia
-              se realizará en la capilla de la hacienda auspiciada por el monseñor Alfonso Gerardo
-              Miranda Guardiola.
+              &iexcl;Nos casamos! Los invitamos a acompa&ntilde;arnos en nuestro enlace religioso.
+              La ceremonia se realizar&aacute; en la capilla de la hacienda auspiciada por el
+              monse&ntilde;or Alfonso Gerardo Miranda Guardiola.
             </Event>
             <Event variant="middle" title="Coctel de Bienvenida" time="7:00pm - 8:00am">
-              ¡Nada como un buen coctel para los nervios después de la boda! Nos moveremos al área
-              del coctel para saludarnos, conversar, tomarnos fotos, y calentar motores para el
-              baile.
+              &iexcl;Nada como un buen coctel para los nervios despu&eacute;s de la boda! Nos
+              moveremos al &aacute;rea del coctel para saludarnos, conversar, tomarnos fotos, y
+              calentar motores para el baile.
             </Event>
-            <Event variant="end" title="Recepción" time="8:00pm - 2:00am">
-              ¡Es hora de la fiesta! Acompañanos a celebrar y a bailar toda la noche.
+            <Event variant="end" title="Recepci&oacute;n" time="8:00pm - 2:00am">
+              &iexcl;Es hora de la fiesta! Acompa&ntilde;anos a celebrar y a bailar toda la noche.
             </Event>
           </div>
         </Container>
@@ -233,13 +233,13 @@ export default function Wedding({ code }) {
             <IconContent iconType="dressCode" title="Vestimenta">
               Formal, evento al aire libre. No se permiten vestidos de colores claros o blancos.
             </IconContent>
-            <IconContent iconType="forbidden" title="No Niños">
+            <IconContent iconType="forbidden" title="No Ni&ntilde;os">
               Queremos que disfruten y bailen sin parar, es por ello que para la seguridad de todos
-              y por las características del lugar, la invitación es solo para adultos.
+              y por las caracter&iacute;sticas del lugar, la invitaci&oacute;n es solo para adultos.
             </IconContent>
             <IconContent iconType="alcohol" title="Alcohol">
-              En la fiesta se servirá alcohol, aunque eres libre de traer tu propia botella siempre
-              y cuando tenga marbete y esté sellada.
+              En la fiesta se servir&aacute; alcohol, aunque eres libre de traer tu propia botella
+              siempre y cuando tenga marbete y est&eacute; sellada.
             </IconContent>
           </div>
         </Container>
@@ -249,8 +249,8 @@ export default function Wedding({ code }) {
             Mesa de Regalos
           </h2>
           <p className="text-center">
-            Tu presencia es lo más importante para nosotros, pero si deseas obsequiarnos algo te
-            compartimos las siguientes opciones:
+            Tu presencia es lo m&aacute;s importante para nosotros, pero si deseas obsequiarnos algo
+            te compartimos las siguientes opciones:
           </p>
           <div className="flex space-x-8 md:space-x-12">
             <Gift
@@ -287,35 +287,37 @@ export default function Wedding({ code }) {
           >
             <SwiperSlide>
               <City city="Guadalajara" variant="guadalajara">
-                El corazón de Jalisco, donde podrás visitar hermosas catedrales y museos, así como
-                las plazas y parques emblemáticos de esta zona. Obligado ir a &quot;Casa
-                Bariachi&quot; para disfrutar de nuestra comida regional y de un buen mariachi.
-                También visita de noche el corredor de &quot;Chapultepec&quot; para cenar y pasear
-                por el andador.
+                El coraz&oacute;n de Jalisco, donde podr&aacute;s visitar hermosas catedrales y
+                museos, as&iacute; como las plazas y parques emblem&aacute;ticos de esta zona.
+                Obligado ir a &quot;Casa Bariachi&quot; para disfrutar de nuestra comida regional y
+                de un buen mariachi. Tambi&eacute;n visita de noche el corredor de
+                &quot;Chapultepec&quot; para cenar y pasear por el andador.
               </City>
             </SwiperSlide>
             <SwiperSlide>
               <City city="Tequila" variant="tequila">
-                Obligada la visita a este pueblo mágico, productor de nuestra bebida nacional. Pasea
-                por sus calles mágicas. Visita las casas tequileras donde podras conocer las
-                destilerias y recorrer los deslumbrantes campos de agave. No olvides pasar por
-                &quot;Cantaritos el Güero&quot; donde disfrutarás con bebidas y música.
+                Obligada la visita a este pueblo m&aacute;gico, productor de nuestra bebida
+                nacional. Pasea por sus calles m&aacute;gicas. Visita las casas tequileras donde
+                podras conocer las destilerias y recorrer los deslumbrantes campos de agave. No
+                olvides pasar por &quot;Cantaritos el Güero&quot; donde disfrutar&aacute;s con
+                bebidas y m&uacute;sica.
               </City>
             </SwiperSlide>
             <SwiperSlide>
               <City city="Pueblos Magicos" variant="magic">
-                Jalisco cuenta con hermosos pueblos mágicos para pasarla como reyes. Viaja al pasado
-                en el centro de Tapalpa, quedaté en una cabaña en medio del bosque de Mazamitla,
-                come a orillas del lago mas grande del pais en Chapala, o un domingo compra cajeta
-                en el mercado mas grande del pais en San Juan de los Lagos.
+                Jalisco cuenta con hermosos pueblos m&aacute;gicos para pasarla como reyes. Viaja al
+                pasado en el centro de Tapalpa, quedat&eacute; en una caba&ntilde;a en medio del
+                bosque de Mazamitla, come a orillas del lago mas grande del pais en Chapala, o un
+                domingo compra cajeta en el mercado mas grande del pais en San Juan de los Lagos.
               </City>
             </SwiperSlide>
             <SwiperSlide>
               <City city="Vallarta" variant="vallarta">
                 Esta ciudad costera es caracterizada por sus hermosas playas de reconocimiento
-                mundial con un centro histórico que te encantará. Recorré el malecón y disfruta de
-                las actividades acuáticas que te ofrece. No olvides visitar las playas de la riviera
-                como Sayulita, Punta Mita, San Pancho, y Guayabitos; no te querrás ir.
+                mundial con un centro hist&oacute;rico que te encantar&aacute;. Recorr&eacute; el
+                malec&oacute;n y disfruta de las actividades acu&aacute;ticas que te ofrece. No
+                olvides visitar las playas de la riviera como Sayulita, Punta Mita, San Pancho, y
+                Guayabitos; no te querr&aacute;s ir.
               </City>
             </SwiperSlide>
           </Swiper>
@@ -327,15 +329,15 @@ export default function Wedding({ code }) {
           </h2>
           <p className="text-center">
             Nos encargamos de buscarte algunas opciones para tu estancia en Guadalajara. Al hacer tu
-            reservación puedes proporcionar el código correspondiente para obtener una tarifa
-            preferencial. Recuerda que los hoteles tienen opciones de transporte privado, pregunta
-            en recepción por las opciones disponibles.
+            reservaci&oacute;n puedes proporcionar el c&oacute;digo correspondiente para obtener una
+            tarifa preferencial. Recuerda que los hoteles tienen opciones de transporte privado,
+            pregunta en recepci&oacute;n por las opciones disponibles.
           </p>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
             <Accomodation title="FCH Providencia" code="PENDIENTE" url="/files/hotel-fch.pdf">
-              Ubicado en el corazón de Providencia, una zona muy popular en Guadalajara, FCH es un
-              hotel boutique con cientos de restaurantes y negocios a unos cuantos pasos. El hotel
-              es solo para adultos (mayor a 18 años).
+              Ubicado en el coraz&oacute;n de Providencia, una zona muy popular en Guadalajara, FCH
+              es un hotel boutique con cientos de restaurantes y negocios a unos cuantos pasos. El
+              hotel es solo para adultos (mayor a 18 a&ntilde;os).
             </Accomodation>
             <Accomodation title="Hilton Midtown" code="PENDIENTE" url="/files/hotel-hilton.pdf">
               Ubicado en una de las plazas comerciales mas conocidas de la ciudad, Hilton es un
@@ -358,8 +360,8 @@ export default function Wedding({ code }) {
               linkHref="https://goo.gl/maps/XffChC7wmAizJoaRA"
             >
               El aeropuerto de Guadalajara es el &quot;Aeropuerto Internacional de Guadalajara
-              Miguel Hidalgo y Costilla&quot; ubicado a unos 25 minutos al sur del corazón de la
-              ciudad. El aeropuerto cuenta con taxis seguros y zonas para renta de autos.
+              Miguel Hidalgo y Costilla&quot; ubicado a unos 25 minutos al sur del coraz&oacute;n de
+              la ciudad. El aeropuerto cuenta con taxis seguros y zonas para renta de autos.
             </IconContent>
             <IconContent iconType="toWedding" title="Rumbo a la boda">
               Toma en cuenta el tiempo aproximado de llegada al lugar, ya sea que consigas un
@@ -367,22 +369,22 @@ export default function Wedding({ code }) {
               disponible). Recuerda preguntar en el hotel por opciones de transporte disponibles.
             </IconContent>
             <IconContent iconType="fromWedding" title="De regreso al hotel">
-              Como la hacienda está retirada de la ciudad, a la hora que termine la fiesta no habrá
-              servicios de transporte privados (Uber, DiDi) disponibles. Al confirmar la asistencia,
-              te preguntamos si necesitas transporte para nosotros pedir un número limitado de taxis
-              seguros, el costo va por parte de ustedes.
+              Como la hacienda est&aacute; retirada de la ciudad, a la hora que termine la fiesta no
+              habr&aacute; servicios de transporte privados (Uber, DiDi) disponibles. Al confirmar
+              la asistencia, te preguntamos si necesitas transporte para nosotros pedir un
+              n&uacute;mero limitado de taxis seguros, el costo va por parte de ustedes.
             </IconContent>
           </div>
         </Container>
         <Divider />
         <Container className="md:pb-8">
           <h2 id="questions" className="uppercase">
-            ¿Dudas?
+            &iquest;Dudas?
           </h2>
           <p className="text-center">
             Nos puedes contactar de manera personal o al correo electr&oacute;nico{" "}
             <a href="mailto:boda@jordanyvero.com">boda@jordanyvero.com</a> para cualquier duda,
-            sugerencia, aclaración, o solo para platicar!
+            sugerencia, aclaraci&oacute;n, o solo para platicar!
           </p>
         </Container>
       </div>
