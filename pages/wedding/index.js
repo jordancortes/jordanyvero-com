@@ -147,6 +147,10 @@ export default function Wedding({ code }) {
             <span className="flex flex-col space-y-4 items-center">
               <h3>Hacienda La Santa Cruz</h3>
               <p>Carretera Colotlán Km 5.5, Zapopan, Jal.</p>
+              <p>
+                (en carretera a Colotlán das vuelta a la derecha en calle Gaviotas y al fondo hay un
+                portón, cruzas el portón y la hacienda está al fondo)
+              </p>
               {/* https://www.timeanddate.com/weather/mexico/guadalajara/historic?month=3&year=2021 */}
               <div className="grid grid-cols-3 gap-8">
                 <div className="grid grid-rows-2 justify-items-center gap-2 text-center">
@@ -189,7 +193,7 @@ export default function Wedding({ code }) {
                   </div>
                 </div>
               </div>
-              <a className="variant-secondary" href="https://goo.gl/maps/fJBzkcrBFf7pspEh6">
+              <a className="variant-secondary" href="https://goo.gl/maps/PkmtJt111GdtWr3n8">
                 Ver en mapa
               </a>
             </span>
