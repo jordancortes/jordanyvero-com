@@ -328,20 +328,12 @@ export default function Wedding({ code }) {
             en recepción por las opciones disponibles.
           </p>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
-            <Accomodation
-              title="FCH Providencia"
-              code="PENDIENTE"
-              url="http://fch-hotels.com/providencia"
-            >
+            <Accomodation title="FCH Providencia" code="PENDIENTE" url="/files/hotel-fch.pdf">
               Ubicado en el corazón de Providencia, una zona muy popular en Guadalajara, FCH es un
               hotel boutique con cientos de restaurantes y negocios a unos cuantos pasos. El hotel
               es solo para adultos (mayor a 18 años).
             </Accomodation>
-            <Accomodation
-              title="Hilton Midtown"
-              code="PENDIENTE"
-              url="https://www.hilton.com/en/hotels/gdlgmhh-hilton-guadalajara-midtown/"
-            >
+            <Accomodation title="Hilton Midtown" code="PENDIENTE" url="/files/hotel-hilton.pdf">
               Ubicado en una de las plazas comerciales mas conocidas de la ciudad, Hilton es un
               hotel de alto prestigio. La plaza cuenta con decenas de restaurantes y tiendas
               departamentales, asi como un supermercado.
