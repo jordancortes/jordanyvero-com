@@ -1,17 +1,30 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["attribution"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default function Attribution() {
+  const { t } = useTranslation("attribution");
+
   return (
     <div>
       <Head>
-        <title>Boda Jordan&amp;Vero | Atribuci&oacute;n</title>
+        <title>{t("title")}</title>
       </Head>
 
       <Header />
 
       <div className="flex flex-col px-4 pt-4">
-        <h2 className="text-center">Atribuci&oacute;n</h2>
+        <h2 className="text-center">{t("h2")}</h2>
         <h3>Backgrounds</h3>
         <ul className="list-disc list-inside pt-1 pb-4">
           <li>

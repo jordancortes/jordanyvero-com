@@ -2,6 +2,7 @@ import Head from "next/head";
 import { AppContextProvider } from "../util/AppContext";
 import { RealmContextProvider } from "../util/RealmContext";
 import { RealmApolloContextProvider } from "../util/RealmApolloContext";
+import { appWithTranslation } from "next-i18next";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -50,4 +51,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

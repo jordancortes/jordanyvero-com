@@ -4,11 +4,23 @@ import { useRouter } from "next/router";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import { useState } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["index"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default function Home() {
   const router = useRouter();
   const [code, setCode] = useState("");
   const [isConfirmButtonBlocked, setIsConfirmButtonBlocked] = useState(false);
+  const { t } = useTranslation("index");
 
   const handleGoToWedding = async (e) => {
     e.preventDefault();
@@ -21,7 +33,7 @@ export default function Home() {
   return (
     <div className="lg:flex lg:h-screen lg:items-center">
       <Head>
-        <title>Boda Jordan&amp;Vero</title>
+        <title>{t("title")}</title>
       </Head>
 
       <div className="flex md:hidden">
@@ -59,7 +71,7 @@ export default function Home() {
         </div>
 
         <p className="font-medium text-center text-gray-600 lg:text-xl">
-          Marzo 19, 2022
+          {t("date")}
           <br />
           Guadalajara, Jalisco
         </p>
@@ -67,14 +79,14 @@ export default function Home() {
         <form className="flex space-x-3" onSubmit={handleGoToWedding}>
           <Input
             type="text"
-            placeholder="C&oacute;digo"
+            placeholder={t("code-input-placeholder")}
             onChange={(e) => {
               setCode(e.target.value.toUpperCase().trim());
             }}
             required
           ></Input>
           <Button className="flex-shrink-0" disabled={isConfirmButtonBlocked}>
-            Ver invitaci&oacute;n
+            {t("code-button1")}
           </Button>
         </form>
       </div>

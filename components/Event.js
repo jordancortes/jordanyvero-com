@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Event = ({ variant, title, time, children }) => {
+  const { t } = useTranslation("comp-event");
+
   return (
     <div className="flex space-x-2">
       <div className="flex flex-col flex-shrink-0 ml-2">
@@ -11,7 +14,7 @@ const Event = ({ variant, title, time, children }) => {
         )}
         <Image
           src="/images/wedding/icon-heart.svg"
-          alt="icono de corazon"
+          alt={t("heart-image-alt")}
           width="16.5"
           height="14.08"
           layout="fixed"

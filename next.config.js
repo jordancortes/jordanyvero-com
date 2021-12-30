@@ -4,9 +4,11 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 const { withSentryConfig } = require("@sentry/nextjs");
+const { i18n } = require("./next-i18next.config");
 
 const moduleExports = {
   reactStrictMode: true,
+  i18n,
 };
 
 const SentryWebpackPluginOptions = {

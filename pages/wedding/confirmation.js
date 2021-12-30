@@ -4,12 +4,24 @@ import { useContext, useState, useEffect } from "react";
 import AppContext from "../../util/AppContext";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["wed-confirm"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default function Confirmation() {
   const router = useRouter();
   const [assistance, setAssistance] = useState(0);
   const [isPageReady, setIsPageReady] = useState(false);
   const { invitationQuery } = useContext(AppContext);
+  const { t } = useTranslation("wed-confirm");
 
   // if invitation is not loaded, we go back to landing
   useEffect(() => {
@@ -28,25 +40,22 @@ export default function Confirmation() {
   return isPageReady ? (
     <div>
       <Head>
-        <title>Boda Jordan&amp;Vero | Confirmaci&oacute;n</title>
+        <title>{t("title")}</title>
       </Head>
 
       <Header />
       <div className="px-4">
         <div className="flex flex-col items-center text-center space-y-4 pt-4">
-          <h2>&iexcl;Gracias por confirmar tu asistencia!</h2>
+          <h2>{t("h2")}</h2>
           {assistance !== 0 ? (
             <div className="space-y-4">
-              <p>
-                Si necesitas hacer un cambio aun lo puedes hacer y te invitamos a ver el resto de la
-                informacion.
-              </p>
-              <p>&iexcl;Te esperamos el dia de la boda!</p>
+              <p>{t("p1")}</p>
+              <p>{t("p2")}</p>
             </div>
           ) : (
             ""
           )}
-          <Button onClick={handleGoToWedding}>Volver a la invitaci&oacute;n</Button>
+          <Button onClick={handleGoToWedding}>{t("button-back1")}</Button>
         </div>
       </div>
     </div>
