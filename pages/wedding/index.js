@@ -125,6 +125,42 @@ export default function Wedding({ code }) {
               layout="responsive"
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story4.jpg"
+              alt={t("swiper1-alt")}
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story5.jpg"
+              alt={t("swiper1-alt")}
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story6.jpg"
+              alt={t("swiper1-alt")}
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="/images/wedding/story/our-story7.jpg"
+              alt={t("swiper1-alt")}
+              width="2000"
+              height="1333"
+              layout="responsive"
+            />
+          </SwiperSlide>
         </Swiper>
         <Container className="md:flex-row">
           <span className="flex flex-col space-y-4 md:mx-4">
