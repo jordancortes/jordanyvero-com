@@ -47,7 +47,17 @@ export default function Home() {
         />
       </div>
 
-      <div className="hidden md:flex md:pb-4 lg:w-full lg:-ml-80">
+      <div className="hidden lg:flex lg:w-4/5 lg:-ml-80 2xl:hidden">
+        <Image
+          src="/images/index/hero.jpg"
+          alt="Foto decorada de los novios: Jordan y Vero"
+          width="1076"
+          height="841"
+          objectPosition="contain"
+        />
+      </div>
+
+      <div className="hidden md:flex md:pb-4 md:w-full md:-ml-12 lg:hidden 2xl:flex 2xl:pb-4 2xl:w-full 2xl:-ml-80">
         <Image
           src="/images/index/hero.jpg"
           alt="Foto decorada de los novios: Jordan y Vero"
