@@ -175,15 +175,15 @@ export default function Wedding({ code }) {
             {t("h2-place")}
           </h2>
           <span className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center">
-            <span className="flex md:mr-8">
+            <span className="flex md:mr-8 md:w-1/2">
               <Image
                 src="/images/wedding/place.jpg"
                 alt={t("image-place-alt")}
-                width="343"
-                height="343"
+                width="2954"
+                height="2954"
               />
             </span>
-            <span className="flex flex-col space-y-4 items-center">
+            <span className="flex flex-col space-y-4 items-center md:w-1/2">
               <h3>Hacienda La Santa Cruz</h3>
               <p>Carretera Colotl&aacute;n Km 5.5, Zapopan, Jal.</p>
               <p>{t("place-text1")}</p>
