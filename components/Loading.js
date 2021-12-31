@@ -15,7 +15,7 @@ const Loading = () => {
           width="100"
           height="100"
         />
-        <h2>{t("h2")}</h2>
+        <h2 className="text-center">{t("h2")}</h2>
       </div>
     </div>
   );

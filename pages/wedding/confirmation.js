@@ -46,7 +46,7 @@ export default function Confirmation() {
       <Header />
       <div className="px-4">
         <div className="flex flex-col items-center text-center space-y-4 pt-4">
-          <h2>{t("h2")}</h2>
+          <h2 className="text-center">{t("h2")}</h2>
           {assistance !== 0 ? (
             <div className="space-y-4">
               <p>{t("p1")}</p>

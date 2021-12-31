@@ -20,7 +20,7 @@ const InvitationNotFound = ({ code }) => {
     <div>
       <Header />
       <div className="flex flex-col space-y-4 p-4 items-center">
-        <h2 className="mb-4">{t("h2")}</h2>
+        <h2 className="text-center mb-4">{t("h2")}</h2>
         <Image src="/images/global/icon-letter.svg" alt={t("image-alt")} width="100" height="100" />
         <p className="text-center">
           {t("text1")} <span className="font-medium">{code}</span> {t("text2")}{" "}
