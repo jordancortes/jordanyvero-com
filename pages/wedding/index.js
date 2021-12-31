@@ -75,93 +75,93 @@ export default function Wedding({ code }) {
       </Head>
 
       <Header withButton swiperOurStory={swiperOurStory} />
+      <Swiper
+        modules={[Autoplay]}
+        onSwiper={(swiper) => {
+          setSwiperOurStory(swiper);
+        }}
+        autoplay={{
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        loopAdditionalSlides={5}
+        slidesPerView={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+        spaceBetween={0}
+        className="w-full"
+      >
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story1.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story2.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story3.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story4.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story5.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story6.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/wedding/story/our-story7.jpg"
+            alt={t("swiper1-alt")}
+            width="2000"
+            height="1333"
+            layout="responsive"
+          />
+        </SwiperSlide>
+      </Swiper>
       <div className="flex flex-col">
-        <Swiper
-          modules={[Autoplay]}
-          onSwiper={(swiper) => {
-            setSwiperOurStory(swiper);
-          }}
-          autoplay={{
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          loopAdditionalSlides={5}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-          spaceBetween={0}
-          className="w-full"
-        >
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story1.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story2.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story3.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story4.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story5.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story6.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/wedding/story/our-story7.jpg"
-              alt={t("swiper1-alt")}
-              width="2000"
-              height="1333"
-              layout="responsive"
-            />
-          </SwiperSlide>
-        </Swiper>
         <Container className="md:flex-row">
           <span className="flex flex-col space-y-4 md:mx-4">
             <p>{t("our-story1")}</p>
