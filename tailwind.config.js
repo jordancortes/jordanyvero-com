@@ -6,6 +6,8 @@ module.exports = {
     fontFamily: {
       sans: ["TT Commons", "ui-sans-serif", "system-ui"],
       cursive: ["WindSong", "cursive"],
+      header: ["Waterfall"],
+      hero: ["Poiret One"],
     },
     extend: {
       colors: {

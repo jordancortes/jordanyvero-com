@@ -163,7 +163,7 @@ export default function Wedding({ code }) {
       </Swiper>
       <div className="flex flex-col lg:w-10/12 2xl:w-8/12 mx-auto">
         <Container className="md:flex-row">
-          <span className="flex flex-col space-y-4 md:mx-4 text-center cursive-text">
+          <span className="flex flex-col space-y-4 md:mx-4 text-center font-hero text-sm md:text-base xl:text-xl">
             <p>{t("our-story1")}</p>
             <p>{t("our-story2")}</p>
             <p>{t("our-story3")}</p>
@@ -171,9 +171,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container>
-          <h2 id="place" className="uppercase">
-            {t("h2-place")}
-          </h2>
+          <h2 id="place">{t("h2-place")}</h2>
           <span className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:items-center">
             <span className="flex md:mr-8 md:w-1/2">
               <Image
@@ -237,9 +235,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container className="bg-event bg-left bg-no-repeat md:bg-contain md:bg-right">
-          <h2 id="event" className="uppercase">
-            {t("h2-schedule")}
-          </h2>
+          <h2 id="event">{t("h2-schedule")}</h2>
           <a className="variant-secondary" href="/calendar/wedding.ics">
             {t("link-add-calendar")}
           </a>
@@ -258,9 +254,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container className="bg-important bg-right bg-cover md:bg-none">
-          <h2 id="important" className="uppercase">
-            {t("h2-important")}
-          </h2>
+          <h2 id="important">{t("h2-important")}</h2>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
             <IconContent iconType="dressCode" title={t("important-dresscode")}>
               {t("dresscode-text1")}
@@ -275,9 +269,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container>
-          <h2 id="gifts" className="uppercase">
-            {t("h2-gifts")}
-          </h2>
+          <h2 id="gifts">{t("h2-gifts")}</h2>
           <p className="text-center">{t("gifts-text1")}</p>
           <div className="flex space-x-8 md:space-x-12">
             <Gift
@@ -294,9 +286,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container>
-          <h2 id="city" className="uppercase">
-            {t("h2-city")}
-          </h2>
+          <h2 id="city">{t("h2-city")}</h2>
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
@@ -336,9 +326,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container>
-          <h2 id="accomodation" className="uppercase">
-            {t("h2-accommodation")}
-          </h2>
+          <h2 id="accomodation">{t("h2-accommodation")}</h2>
           <p className="text-center">{t("accommodation-text1")}</p>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
             <Accomodation title="FCH Providencia" code={t("fch-code")} url={t("fch-doc-link")}>
@@ -351,9 +339,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container className="bg-transport bg-bottom bg-no-repeat bg-cover md:bg-auto">
-          <h2 id="transport" className="uppercase">
-            {t("transport")}
-          </h2>
+          <h2 id="transport">{t("h2-transport")}</h2>
           <div className="space-y-6 pb-4 md:flex md:space-y-0 md:pt-2 md:space-x-6">
             <IconContent
               iconType="flight"
@@ -374,9 +360,7 @@ export default function Wedding({ code }) {
         </Container>
         <Divider />
         <Container className="md:pb-8">
-          <h2 id="questions" className="uppercase">
-            {t("h2-questions")}
-          </h2>
+          <h2 id="questions">{t("h2-questions")}</h2>
           <p className="text-center">
             {t("questions-text1")} <a href="mailto:boda@jordanyvero.com">boda@jordanyvero.com</a>{" "}
             {t("questions-text2")}
