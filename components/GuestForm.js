@@ -9,7 +9,7 @@ const GuestForm = ({ id, className, dataOrder, title, guestData }) => {
 
   return (
     <div id={id} data-order={dataOrder} className={l_class}>
-      <h2 className="text-xl font-medium self-center">{title}</h2>
+      <h2 className="text-5xl font-medium self-center">{title}</h2>
       <input type="hidden" name="guests" value=""></input>
       <Input
         name={"name"}
