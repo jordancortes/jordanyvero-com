@@ -179,8 +179,8 @@ export default function Wedding({ code }) {
               <Image
                 src="/images/wedding/place.jpg"
                 alt={t("image-place-alt")}
-                width="2954"
-                height="2954"
+                width="720"
+                height="540"
               />
             </span>
             <span className="flex flex-col space-y-4 items-center md:w-1/2">
