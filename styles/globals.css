@@ -86,4 +86,8 @@
   label {
     @apply text-sm font-medium;
   }
+
+  .cursive-text {
+    font-family: "Poiret One", cursive;
+  }
 }

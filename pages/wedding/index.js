@@ -163,7 +163,7 @@ export default function Wedding({ code }) {
       </Swiper>
       <div className="flex flex-col lg:w-10/12 2xl:w-8/12 mx-auto">
         <Container className="md:flex-row">
-          <span className="flex flex-col space-y-4 md:mx-4">
+          <span className="flex flex-col space-y-4 md:mx-4 text-center cursive-text">
             <p>{t("our-story1")}</p>
             <p>{t("our-story2")}</p>
             <p>{t("our-story3")}</p>
