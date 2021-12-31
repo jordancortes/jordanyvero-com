@@ -144,7 +144,9 @@ export default function Invitation() {
       <Header />
       <div className="px-3">
         <div className="flex flex-col items-center py-4 space-y-2">
-          <h2>{t("h2-hello", { family_name: invitationQuery.family_name })}</h2>
+          <h2 className="text-center">
+            {t("h2-hello", { family_name: invitationQuery.family_name })}
+          </h2>
           {/* TODO: work on singular-plural */}
           <p>{t("p1-plural", { max_assistance: invitationQuery.max_assistance })}</p>
         </div>
