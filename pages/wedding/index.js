@@ -267,7 +267,14 @@ export default function Wedding({ code }) {
             </IconContent>
           </div>
         </Container>
-        <Divider />
+      </div>
+      <Image
+        src="/images/wedding/splash/splash.jpg"
+        className="flex flex-col"
+        width="2000"
+        height="1498"
+      />
+      <div className="flex flex-col lg:w-10/12 2xl:w-8/12 mx-auto">
         <Container>
           <h2 id="gifts">{t("h2-gifts")}</h2>
           <p className="text-center">{t("gifts-text1")}</p>
