@@ -14,7 +14,6 @@ export const AppContextProvider = ({ children }) => {
       return {
         name: form.name[idx].value,
         diet: form.diet[idx].value,
-        transport: form.transport[idx].value === "true",
         allergies: form.allergies[idx].value,
       };
     });

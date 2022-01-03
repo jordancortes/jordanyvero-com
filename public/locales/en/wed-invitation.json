@@ -1,0 +1,18 @@
+{
+  "title": "Jordan&Vero Wedding | Invitation",
+  "h2-hello": "¡Hi {{family_name}}!",
+  "p1-singular": "We have {{max_assistance}} seat waiting for you.",
+  "p1-plural": "We have {{max_assistance}} seats waiting for you.",
+  "select-confirm": "I confirm the attendance of:",
+  "select-no-assist": "I will not attend",
+  "select-assist-singular": " person",
+  "select-assist-plural": " people",
+  "phone-desc": "We need at least one phone number where we can confirm the attendance a few days before the wedding.",
+  "primary-phone": "Phone #1",
+  "secondary-phone": "Phone #2",
+  "email-desc": "The email is optional, and we will only use it for some general wedding announcements.",
+  "no-assist-message": "Oh no! You'll miss the party! At least leave us a message (and you can check out our gift list)",
+  "message-label": "Message",
+  "guest-title": "Guest #",
+  "confirm-button1": "Confirm attendance"
+}

@@ -2,9 +2,15 @@ import Header from "./Header";
 import Image from "next/image";
 import Button from "./Button";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+
+const tmail = () => {
+  return <a href="mailto:boda@jordanyvero.com">boda@jordanyvero.com</a>;
+};
 
 const InvitationNotFound = ({ code }) => {
   const router = useRouter();
+  const { t } = useTranslation("comp-notfound");
 
   const handleGoToSearch = () => {
     router.push({ pathname: "/" });
@@ -14,20 +20,13 @@ const InvitationNotFound = ({ code }) => {
     <div>
       <Header />
       <div className="flex flex-col space-y-4 p-4 items-center">
-        <h2 className="mb-4">Esta invitaci&oacute;n no existe</h2>
-        <Image
-          src="/images/global/icon-letter.svg"
-          alt="Icono de invitación"
-          width="100"
-          height="100"
-        />
+        <h2 className="text-center mb-4">{t("h2")}</h2>
+        <Image src="/images/global/icon-letter.svg" alt={t("image-alt")} width="100" height="100" />
         <p className="text-center">
-          El c&oacute;digo <span className="font-medium">{code}</span> es incorrecto. Si crees que
-          el c&oacute;digo es correcto, por favor escribenos a{" "}
-          <a href="mailto:boda@jordanyvero.com">boda@jordanyvero.com</a> para ayudarte con el
-          problema.
+          {t("text1")} <span className="font-medium">{code}</span> {t("text2")}{" "}
+          <a href="mailto:boda@jordanyvero.com">boda@jordanyvero.com</a> {t("text3")}
         </p>
-        <Button onClick={handleGoToSearch}>Volver al inicio</Button>
+        <Button onClick={handleGoToSearch}>{t("back-button1")}</Button>
       </div>
     </div>
   );

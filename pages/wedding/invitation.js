@@ -10,6 +10,17 @@ import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 import { updateOneInvitationMutation } from "../../graphql/mutations";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["wed-invitation", "comp-guestform"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default function Invitation() {
   const router = useRouter();
@@ -17,6 +28,7 @@ export default function Invitation() {
   const [isPageReady, setIsPageReady] = useState(false);
   const [isConfirmButtonBlocked, setIsConfirmButtonBlocked] = useState(false);
   const { invitationQuery, setInvitationQuery, prepareInivitationInput } = useContext(AppContext);
+  const { t } = useTranslation("wed-invitation");
 
   const [updateOneInvitation, { data, loading, error }] = useMutation(updateOneInvitationMutation);
 
@@ -73,7 +85,6 @@ export default function Invitation() {
         form.elements.message.value = null;
 
         // re-add contact required conditions
-        form.elements["email"].required = true;
         form.elements["primary_phone"].required = true;
 
         // Handle rest of content
@@ -115,7 +126,6 @@ export default function Invitation() {
     // cleanup fields
     elements["name"][order].value = null;
     elements["diet"][order].value = "meat";
-    elements["transport"][order].value = "false";
     elements["allergies"][order].value = null;
 
     // remove required conditions
@@ -128,41 +138,40 @@ export default function Invitation() {
   return isPageReady ? (
     <div>
       <Head>
-        <title>Boda Jordan&amp;Vero | Invitaci&oacute;n</title>
+        <title>{t("title")}</title>
       </Head>
 
       <Header />
       <div className="px-3">
         <div className="flex flex-col items-center py-4 space-y-2">
-          <h2>¡Hola {invitationQuery.family_name}!</h2>
-          <p>Tenemos {invitationQuery.max_assistance} lugares esperando por ustedes.</p>
+          <h2 className="text-center">
+            {t("h2-hello", { family_name: invitationQuery.family_name })}
+          </h2>
+          {/* TODO: work on singular-plural */}
+          <p>{t("p1-plural", { max_assistance: invitationQuery.max_assistance })}</p>
         </div>
         <form onSubmit={handleSubmitInvitation} className="flex flex-col space-y-4 pb-4">
           <Select
-            label="Confirmo que asistir&aacute;n a la boda:"
+            label={t("select-confirm")}
             onChange={(e) => setAssistance(parseInt(e.target.value))}
             defaultValue={assistance}
             name="assistance"
           >
             {[...Array(invitationQuery.max_assistance + 1)].map((v, idx) => (
               <option key={idx} value={idx}>
-                {idx === 0 ? "No asistiré" : idx + (idx === 1 ? " persona" : " personas")}
+                {idx === 0
+                  ? t("select-no-assist")
+                  : idx + (idx === 1 ? t("select-assist-singular") : t("select-assist-plural"))}
               </option>
             ))}
           </Select>
 
           <div id="guests-contact-details">
             <div className="space-y-4">
-              <Input
-                name="email"
-                label="Email"
-                type="email"
-                defaultValue={invitationQuery.email}
-                required
-              ></Input>
+              <p>{t("phone-desc")}</p>
               <Input
                 name="primary_phone"
-                label="Tel&eacute;fono #1"
+                label={t("primary-phone")}
                 type="number"
                 pattern="[0-9]*"
                 defaultValue={invitationQuery.primary_phone}
@@ -170,10 +179,17 @@ export default function Invitation() {
               ></Input>
               <Input
                 name="secondary_phone"
-                label="Tel&eacute;fono #2"
+                label={t("secondary-phone")}
                 type="number"
                 pattern="[0-9]*"
                 defaultValue={invitationQuery.secondary_phone}
+              ></Input>
+              <p>{t("email-desc")}</p>
+              <Input
+                name="email"
+                label="Email"
+                type="email"
+                defaultValue={invitationQuery.email}
               ></Input>
             </div>
           </div>
@@ -186,14 +202,11 @@ export default function Invitation() {
                 <source src="/videos/sad-kid.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <p>
-                Del fieston que te vas a perder, al menos dejanos un mensaje (y te pasas por la
-                sección de regalos)
-              </p>
+              <p>{t("no-assist-message")}</p>
             </div>
             <Input
               name="message"
-              label="Mensaje"
+              label={t("message-label")}
               type="area"
               defaultValue={invitationQuery.message}
             ></Input>
@@ -206,14 +219,14 @@ export default function Invitation() {
                 id={"guest-" + idx}
                 className="guest"
                 dataOrder={idx}
-                title={"Invitado #" + (idx + 1)}
+                title={t("guest-title") + (idx + 1)}
                 guestData={invitationQuery.guests[idx]}
               ></GuestForm>
             ))}
           </div>
 
           <Button className="place-self-center" type="submit" disabled={isConfirmButtonBlocked}>
-            Confirmar Asistencia
+            {t("confirm-button1")}
           </Button>
         </form>
       </div>

@@ -1,0 +1,18 @@
+{
+  "title": "Boda Jordan&Vero | Invitación",
+  "h2-hello": "¡Hola {{family_name}}!",
+  "p1-singular": "Tenemos {{max_assistance}} lugar esperando por ti.",
+  "p1-plural": "Tenemos {{max_assistance}} lugares esperando por ustedes.",
+  "select-confirm": "Confirmo que asistirán a la boda:",
+  "select-no-assist": "No asistiré",
+  "select-assist-singular": " persona",
+  "select-assist-plural": " personas",
+  "phone-desc": "Necesitamos al menos un teléfono donde podamos comunicarnos para confirmar la asistencia unos dias antes de la boda",
+  "primary-phone": "Teléfono #1",
+  "secondary-phone": "Teléfono #2",
+  "email-desc": "El correo electrónico es opcional y lo usariamos solo para mandar avisos de la boda",
+  "no-assist-message": "Del fiestón que te vas a perder, al menos dejanos un mensaje (y te pasas por la sección de regalos)",
+  "message-label": "Mensaje",
+  "guest-title": "Invitado #",
+  "confirm-button1": "Confirmar Asistencia"
+}

@@ -15,7 +15,6 @@ export const getInvitation = gql`
       guests {
         name
         diet
-        transport
         allergies
       }
     }

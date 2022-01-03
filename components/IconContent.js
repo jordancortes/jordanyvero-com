@@ -1,13 +1,16 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref }) => {
+  const { t } = useTranslation("comp-icon");
+
   const renderIcon = (iconType) => {
     switch (iconType) {
       case "flight":
         return (
           <Image
             src="/images/wedding/icon-flight.svg"
-            alt="icono de boletos de avion"
+            alt={t("image-flight-alt")}
             width="56"
             height="32"
           />
@@ -16,7 +19,7 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
         return (
           <Image
             src="/images/wedding/icon-toWedding.svg"
-            alt="icono de boda"
+            alt={t("image-towedding-alt")}
             width="56"
             height="32"
           />
@@ -25,7 +28,7 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
         return (
           <Image
             src="/images/wedding/icon-fromWedding.svg"
-            alt="icono de boda"
+            alt={t("image-fromwedding-alt")}
             width="56"
             height="32"
           />
@@ -34,7 +37,7 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
         return (
           <Image
             src="/images/wedding/icon-alcohol.svg"
-            alt="icono de boda"
+            alt={t("image-alcohol-alt")}
             width="56"
             height="32"
           />
@@ -43,7 +46,7 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
         return (
           <Image
             src="/images/wedding/icon-singleDressCode.svg"
-            alt="icono de boda"
+            alt={t("image-singledress-alt")}
             width="56"
             height="32"
           />
@@ -52,7 +55,7 @@ const IconContent = ({ iconType, title, children, withLink, linkTitle, linkHref 
         return (
           <Image
             src="/images/wedding/icon-forbidden.svg"
-            alt="icono de boda"
+            alt={t("image-forbidden-alt")}
             width="56"
             height="32"
           />

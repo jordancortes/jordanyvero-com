@@ -38,6 +38,20 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: "Poiret One";
+    src: url("/fonts/Poiret_One/PoiretOne-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Waterfall";
+    src: url("/fonts/Waterfall/Waterfall-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
   :root {
     font-size: 19px;
     scroll-behavior: smooth;
@@ -60,7 +74,7 @@
   }
 
   h2 {
-    @apply text-2xl font-medium;
+    @apply font-medium font-header text-6xl xl:text-8xl;
   }
 
   h3 {
