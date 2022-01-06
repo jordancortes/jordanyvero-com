@@ -244,7 +244,7 @@ export default function Wedding({ code }) {
             <Event variant="start" title={t("schedule-ceremony")} time="6:00pm - 7:00pm">
               {t("ceremony-text1")}
             </Event>
-            <Event variant="middle" title={t("schedule-cocktail")} time="7:00pm - 8:00am">
+            <Event variant="middle" title={t("schedule-cocktail")} time="7:00pm - 8:00pm">
               {t("cocktail-text1")}
             </Event>
             <Event variant="end" title={t("schedule-party")} time="8:00pm - 2:00am">
