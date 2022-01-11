@@ -10,13 +10,25 @@ export const AppContextProvider = ({ children }) => {
   const [invitationQuery, setInvitationQuery] = useState();
 
   const prepareInivitationInput = (form) => {
-    const guests = Array.from(form.guests).map((g, idx) => {
-      return {
-        name: form.name[idx].value,
-        diet: form.diet[idx].value,
-        allergies: form.allergies[idx].value,
-      };
-    });
+    let guests;
+
+    if (Array.isArray(form.guests)) {
+      guests = Array.from(form.guests).map((g, idx) => {
+        return {
+          name: form.name[idx].value,
+          diet: form.diet[idx].value,
+          allergies: form.allergies[idx].value,
+        };
+      });
+    } else {
+      guests = [
+        {
+          name: form.name.value,
+          diet: form.diet.value,
+          allergies: form.allergies.value,
+        },
+      ];
+    }
 
     return {
       email: form.email.value,

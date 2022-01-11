@@ -73,7 +73,11 @@ export default function Invitation() {
         Array.from(document.querySelectorAll(".guest")).forEach((guest) => {
           if (assistance > guest.dataset.order) {
             // re-add required conditions
-            form.elements["name"][guest.dataset.order].required = true;
+            if (assistance === 1) {
+              form.elements["name"].required = true;
+            } else {
+              form.elements["name"][guest.dataset.order].required = true;
+            }
 
             document.querySelector("#guest-" + guest.dataset.order).classList.remove("hidden");
           } else {
