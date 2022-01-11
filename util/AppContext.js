@@ -12,7 +12,7 @@ export const AppContextProvider = ({ children }) => {
   const prepareInivitationInput = (form) => {
     let guests;
 
-    if (Array.isArray(Array.from(form.guests))) {
+    if (Array.from(form.guests).length > 0) {
       guests = Array.from(form.guests).map((g, idx) => {
         return {
           name: form.name[idx].value,
