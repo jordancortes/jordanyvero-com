@@ -339,9 +339,7 @@ export default function Wedding({ code }) {
             <Accomodation title="FCH Providencia" code={t("fch-code")} url={t("fch-doc-link")}>
               {t("fch-text1")}
             </Accomodation>
-            <Accomodation title="Hilton Midtown" code={t("hilton-code")} url={t("hilton-doc-link")}>
-              {t("hilton-text1")}
-            </Accomodation>
+            <Accomodation title="Hilton Midtown">{t("hilton-text1")}</Accomodation>
           </div>
         </Container>
         <Divider />
