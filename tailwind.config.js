@@ -27,6 +27,10 @@ module.exports = {
       minWidth: {
         "9/10": "90%",
       },
+      maxHeight: {
+        "vh-10/12": "83.33vh",
+        "vh-9/10": "90vh",
+      },
       lineHeight: {
         0: "0",
       },
@@ -42,7 +46,7 @@ module.exports = {
   variants: {
     extend: {
       opacity: ["disabled"],
-      cursor: ["disabled"],
+      cursor: ["hover", "disabled"],
     },
   },
   plugins: [],

@@ -1,104 +1,96 @@
 import Image from "next/image";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { useContext, useEffect, useState, useRef } from "react";
+import AppContext from "../util/AppContext";
+import Header from "../components/Header";
+import GalleryPhotoFull from "../components/GalleryPhotoFull";
 import Button from "../components/Button";
-import Input from "../components/Input";
-import { useState } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps() {
+  let env;
+
+  env =
+    process.env.VERCEL_ENV == "development" ? "http://localhost:3000" : "https://jordanyvero.com";
+
+  const res = await fetch(env + "/images/gallery/photos.json");
+  const gallery = await res.json();
+
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["index"])),
-      // Will be passed to the page component as props
+      gallery: gallery.gallery,
     },
   };
 }
 
-export default function Home() {
-  const router = useRouter();
-  const [code, setCode] = useState("");
-  const [isConfirmButtonBlocked, setIsConfirmButtonBlocked] = useState(false);
-  const { t } = useTranslation("index");
+export default function Home({ gallery }) {
+  const {
+    currentPhotoIdx,
+    setCurrentPhotoIdx,
+    currentGalleryPhoto,
+    setCurrentGalleryPhoto,
+    setGalleryLength,
+  } = useContext(AppContext);
+  const isMounted = useRef(false);
 
-  const handleGoToWedding = async (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    setGalleryLength(gallery.length);
+  }, [gallery, setGalleryLength]);
 
-    setIsConfirmButtonBlocked(true);
+  useEffect(() => {
+    if (isMounted.current) {
+      if (currentGalleryPhoto) {
+        document.getElementById("gallery-modal").classList.remove("hidden");
+      }
+    } else {
+      isMounted.current = true;
+    }
+  }, [currentGalleryPhoto]);
 
-    router.push({ pathname: "/wedding", query: { code } });
+  const handlePhotoOnClick = async (e) => {
+    setCurrentPhotoIdx(e.target.dataset.idx);
+    setCurrentGalleryPhoto(gallery[e.target.dataset.idx]);
   };
 
   return (
-    <div className="lg:flex lg:h-screen lg:items-center">
+    <div>
       <Head>
-        <title>{t("title")}</title>
+        <title>Boda Jordan&Vero | Fotos</title>
       </Head>
 
-      <div className="flex md:hidden">
-        <Image
-          src="/images/index/hero.jpg"
-          alt="Foto decorada de los novios: Jordan y Vero"
-          width="524"
-          height="520"
-          objectFit="none"
-          objectPosition="65% bottom"
-        />
-      </div>
+      <Header />
 
-      <div className="hidden lg:flex lg:w-4/5 lg:-ml-80 2xl:hidden">
-        <Image
-          src="/images/index/hero.jpg"
-          alt="Foto decorada de los novios: Jordan y Vero"
-          width="1076"
-          height="841"
-          objectPosition="contain"
-        />
-      </div>
-
-      <div className="hidden md:flex md:pb-4 md:w-full md:-ml-12 lg:hidden 2xl:flex 2xl:pb-4 2xl:w-full 2xl:-ml-80">
-        <Image
-          src="/images/index/hero.jpg"
-          alt="Foto decorada de los novios: Jordan y Vero"
-          width="2691"
-          height="2103"
-          objectFit="contain"
-        />
-      </div>
-
-      <div className="flex flex-col space-y-3 items-center px-4 lg:w-1/2 lg:space-y-8">
-        <h1 className="text-4xl lg:text-5xl xl:text-7xl text-primary font-cursive font-medium">
-          Jordan &amp; Vero
-        </h1>
-
-        <div className="flex w-full md:w-3/4 xl:w-1/2">
-          <div className="w-full border-b border-secondary self-center"></div>
-          <div className="font-light text-secondary uppercase bg-white px-3 lg:text-xl flex-none">
-            Save the Date
-          </div>
-          <div className="w-full border-b border-secondary self-center"></div>
+      <div className="container mx-auto flex flex-col justify-center mt-4 gap-4 text-center">
+        <h2 className="text-primary">¡Gracias por acompañarnos!</h2>
+        <div className="flex justify-center">
+          <p className={"text-xl"}>Después de grandes momentos, quedan inolvidables recuerdos...</p>
+        </div>
+        <div className="flex justify-end">
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
+            className="py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-primary-light focus:ring-offset-1 hover:bg-primary-dark no-underline"
+            href="/api/proxy?filename=jordanyvero-com/boda_vero_jordan.zip"
+            download
+          >
+            Descargar galería completa
+          </a>
         </div>
 
-        <p className="font-medium text-center text-gray-600 lg:text-xl">
-          {t("date")}
-          <br />
-          Guadalajara, Jalisco
-        </p>
-
-        <form className="flex space-x-3" onSubmit={handleGoToWedding}>
-          <Input
-            type="text"
-            placeholder={t("code-input-placeholder")}
-            onChange={(e) => {
-              setCode(e.target.value.toUpperCase().trim());
-            }}
-            required
-          ></Input>
-          <Button className="flex-shrink-0" disabled={isConfirmButtonBlocked}>
-            {t("code-button1")}
-          </Button>
-        </form>
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-5">
+          {gallery.map((photo, idx) => (
+            <div key={`key-thumb-${idx + 1}`}>
+              <Image
+                className="cursor-pointer"
+                data-idx={idx}
+                src={`/images/gallery/thumb/img${idx + 1}.jpg`}
+                alt={`img-thumb-${idx + 1}`}
+                width="270"
+                height="270"
+                onClick={handlePhotoOnClick}
+              />
+            </div>
+          ))}
+        </div>
+        <GalleryPhotoFull />
       </div>
     </div>
   );

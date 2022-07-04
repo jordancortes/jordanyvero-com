@@ -3,11 +3,20 @@ import { createContext, useState } from "react";
 const AppContext = createContext({
   invitationQuery: {},
   setInvitationQuery: () => {},
+  currentGalleryPhoto: {},
+  setCurrentGalleryPhoto: () => {},
+  currentPhotoIdx: {},
+  setCurrentPhotoIdx: () => {},
+  galleryLength: {},
+  setGalleryLength: () => {},
   prepareInivitationInput: (form) => {},
 });
 
 export const AppContextProvider = ({ children }) => {
   const [invitationQuery, setInvitationQuery] = useState();
+  const [currentGalleryPhoto, setCurrentGalleryPhoto] = useState();
+  const [currentPhotoIdx, setCurrentPhotoIdx] = useState(0);
+  const [galleryLength, setGalleryLength] = useState(0);
 
   const prepareInivitationInput = (form) => {
     let guests;
@@ -46,6 +55,12 @@ export const AppContextProvider = ({ children }) => {
     invitationQuery,
     setInvitationQuery,
     prepareInivitationInput,
+    currentGalleryPhoto,
+    setCurrentGalleryPhoto,
+    currentPhotoIdx,
+    setCurrentPhotoIdx,
+    galleryLength,
+    setGalleryLength,
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
