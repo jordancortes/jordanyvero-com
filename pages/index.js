@@ -9,10 +9,9 @@ import Button from "../components/Button";
 export async function getStaticProps() {
   let env;
 
-  env =
-    process.env.VERCEL_ENV == "development" ? "http://localhost:3000" : "https://jordanyvero.com";
+  // env = process.env.VERCEL_ENV == "development" ? "http://localhost:3000" : "https://jordanyvero.com";
 
-  const res = await fetch(env + "/images/gallery/photos.json");
+  const res = await fetch("https://f002.backblazeb2.com/file/jordanyvero-com/photos.json");
   const gallery = await res.json();
 
   return {
