@@ -67,7 +67,7 @@ export default function Home({ gallery }) {
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             className="py-2 px-3 bg-primary text-sm text-white font-medium rounded-sm disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-primary-light focus:ring-offset-1 hover:bg-primary-dark no-underline"
-            href="/api/proxy?filename=jordanyvero-com/boda_vero_jordan.zip"
+            href="https://f002.backblazeb2.com/file/jordanyvero-com/boda_vero_jordan.zip"
             download
           >
             Descargar galería completa
