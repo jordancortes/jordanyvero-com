@@ -2,7 +2,7 @@ import Button from "../components/Button";
 import { useContext, useEffect } from "react";
 import AppContext from "../util/AppContext";
 
-const GalleryPhotoFull = () => {
+const GalleryPhotoFull = ({ gallery }) => {
   const {
     currentPhotoIdx,
     setCurrentPhotoIdx,
@@ -20,11 +20,13 @@ const GalleryPhotoFull = () => {
           handleModalCloseClick();
         } else if (e.code == "ArrowLeft" && parseInt(currentPhotoIdx) > 0) {
           setCurrentPhotoIdx(parseInt(currentPhotoIdx) - 1);
+          setCurrentGalleryPhoto(gallery[parseInt(currentPhotoIdx) - 1]);
         } else if (
           e.code == "ArrowRight" &&
           parseInt(currentPhotoIdx) < parseInt(galleryLength) - 1
         ) {
           setCurrentPhotoIdx(parseInt(currentPhotoIdx) + 1);
+          setCurrentGalleryPhoto(gallery[parseInt(currentPhotoIdx) + 1]);
         }
       }
     };
@@ -43,11 +45,13 @@ const GalleryPhotoFull = () => {
 
   const handleModalChevronLeftClick = async (e) => {
     setCurrentPhotoIdx(parseInt(currentPhotoIdx) - 1);
+    setCurrentGalleryPhoto(gallery[parseInt(currentPhotoIdx) - 1]);
   };
 
   const handleModalChevronRightClick = async (e) => {
     // console.log("idx1", currentPhotoIdx);
     setCurrentPhotoIdx(parseInt(currentPhotoIdx) + 1);
+    setCurrentGalleryPhoto(gallery[parseInt(currentPhotoIdx) + 1]);
   };
 
   return (

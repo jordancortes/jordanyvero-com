@@ -89,7 +89,7 @@ export default function Home({ gallery }) {
             </div>
           ))}
         </div>
-        <GalleryPhotoFull />
+        <GalleryPhotoFull gallery={gallery} />
       </div>
     </div>
   );
